@@ -1,5 +1,5 @@
 'use strict';
-
+/*jshint unused:false*/
 var app = angular.module('app', ['ui.router']);
 
 app.config(function($locationProvider, $stateProvider) {
@@ -11,5 +11,6 @@ app.config(function($locationProvider, $stateProvider) {
         templateUrl: './../templates/home.html'
     };
 
-    $stateProvider.state(homeState);
+    $stateProvider
+        .state(homeState);
 });
