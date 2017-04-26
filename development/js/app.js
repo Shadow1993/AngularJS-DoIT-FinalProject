@@ -7,20 +7,15 @@ app.config(function($locationProvider, $stateProvider) {
 
     var states = {
         home: {
-            abstract: true,
             name: 'home',
             url: '/',
-            templateUrl: './../templates/home.html'
-        },
-        navigation: {
-            name: 'home.navigation',
-            url: '',
-            templateUrl: './../templates/navigation.html'
+            views: {
+                '': { templateUrl: './../templates/home.html' },
+                'navigation@home': { templateUrl: './../templates/navigation.html' }
+            }
         }
     };
 
     $stateProvider
-        .state(states.home)
-        .state(states.navigation);
-
+        .state(states.home);
 });
