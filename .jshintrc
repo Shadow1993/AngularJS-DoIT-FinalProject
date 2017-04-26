@@ -9,5 +9,5 @@
     "unused"   : true,
     "asi"      : true,
     "esnext"   : true,
-    "predef"   : ["angular", "$"]
+    "predef"   : ["angular", "$", "toastr"]
 }

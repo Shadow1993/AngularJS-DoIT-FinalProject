@@ -1,6 +1,9 @@
-'use strict';
-var app = angular.module('app');
+(function() {
+    'use strict';
 
-app.controller('mainController', function($scope) {
-    $scope.test = 'test';
-});
+    var app = angular.module('app');
+
+    app.controller('mainController', function($scope) {
+        $scope.test = 'test';
+    });
+}());
