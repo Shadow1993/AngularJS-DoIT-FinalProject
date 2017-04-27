@@ -19,7 +19,7 @@ app.use(logger('dev'));
     //Express
 app.use(express.static(path.normalize(__dirname + serverConfig.PUBLIC)));
     //Angular HTML5 Mode
-app.get('*',function(req,res) {
+app.get('*', function(req,res) {
    res.sendFile(path.normalize(__dirname + serverConfig.PUBLIC + serverConfig.HOMEFILE));
 });
 

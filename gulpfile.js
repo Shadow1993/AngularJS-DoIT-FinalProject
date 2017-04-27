@@ -1,4 +1,3 @@
-
 /*-~- Config File -~-*/
 
 var config = require('./gulp-config')(),
@@ -24,30 +23,6 @@ gulp.task('js', funcJS);
     //CSS All tasks with SourceMaps
 gulp.task('css', funcCSS);
 
-    //Check for SCSS Errors and Compile to CSS
-        //Depricated due to css task
-/*
-gulp.task('css-compile', function () {
-    return gulp
-        .src(config.pathsDev.scss)
-        .pipe($.sass().on('error', $.sass.logError))
-        .pipe(gulp.dest(config.pathsDev.temp.css));
-});
-*/
-    //Prefix CSS
-        //Depricated due to css task
-/*
-gulp.task('css-prefix', function() {
-    return gulp
-        .src(config.pathsDev.temp.css + '/** /*.css')
-        .pipe($.autoprefixer({
-            browsers: config.browsers,
-            cascade: false
-        }))
-        .pipe(gulp.dest(config.outputClient.css))
-});
-*/
-
 /*-~- Watchers -~-*/
 
     //JS watcher
@@ -59,14 +34,6 @@ gulp.task('js:watch', ['js'], function () {
 gulp.task('css:watch', ['css'], function () {
     gulp.watch(config.pathsDev.scss, ['css']);
 });
-
-    //Sass Watchers
-        //Depricated due to css task
-/*
-gulp.task('sass:watch', ['sass'], function () {
-    gulp.watch(config.pathsDev.scss, ['sass']);
-});
-*/
 
 /*-~- Functions -~-*/
 
@@ -244,20 +211,11 @@ gulp.task('server', ['css', 'js'], function() {
             .src(config.outputClient.client + '/index.html')
             .pipe($.livereload());
     });
-    
 
     // watch app scripts
     gulp.watch(config.pathsDev.js, ['js'], function() {
         return logMsg('').pipe($.livereload());
     });
-
-    // watch html partials
-    /*
-    gulp.watch(paths.partials, function() {
-        return pipes.builtPartialsDev()
-            .pipe($.livereload());
-    });
-    */
 
     // watch styles
     gulp.watch(config.pathsDev.scss, function() {
