@@ -1,4 +1,5 @@
 @include breakpoint(desktop) {
-    //Styles go here
-    
+   .nav{
+       background-color: $pink;
+   }
 }
