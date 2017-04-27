@@ -2,5 +2,11 @@
     .nav{
         background-color: $green;
     }
+    .nav{
+        a {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+    }
     
 }
