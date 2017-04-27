@@ -1,4 +1,6 @@
 @include breakpoint(tablet) {
-    //Styles go here
+    .nav{
+        background-color: $green;
+    }
     
 }
