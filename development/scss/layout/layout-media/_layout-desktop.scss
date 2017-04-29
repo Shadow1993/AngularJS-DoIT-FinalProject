@@ -1,20 +1,38 @@
 @include breakpoint(desktop) {
    .nav{
+       position: fixed;
        background-color: $silver;
-   }
-   .nav {
-       a { font-family: $font-tr;
+       a {
+            font-family: $font-tr;
             font-weight: bold;
+            margin-right: 1px;
+            li{
+                border-left: 2px solid $black;
+                border-right: 2px solid $black;
+                border-radius: 10%;
+                &:hover {
+                    background-color: $black;
+                    color:white;
+                }
+            }
+            li.login-btn{
+                color: white;
+                background-color: $black;
+                padding: 3px 25px;
+                float: right;
+                border-radius: 10% 10%;
+                margin-right: 1%;
+            }
+            li.register-btn{
+                color: white;
+                background-color: $black;
+                padding: 3px 20px;
+                float: right;
+                border-radius: 10% 10%;
+            }
         }
    }
    .triangle{
        font-size: 12px;
-   }
-  .nav a .login-btn{
-      color: white;
-    background-color: $black;
-    padding: 3px 25px;
-    float: right;
-    border-radius: 10% 10%;
    }
 }
