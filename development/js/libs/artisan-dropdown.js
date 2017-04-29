@@ -4,7 +4,6 @@
         function() {
             function funcDrop(event) {
                 var myTarget = $(event.target).attr('data-artisan-dropdown');
-                // console.log($(event.target).attr('data-artisan-dropdown'));
                 if ($(myTarget).hasClass('artisan-dropdown-menu')) {
                     $(myTarget).removeClass('artisan-dropdown-menu');
                     $(myTarget).addClass('artisan-dropdown-menu-dropped');

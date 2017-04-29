@@ -1,6 +1,20 @@
+.artisan-dropdown{
+    background-color: $grey;
+}
 .artisan-dropdown-menu{
     display:none;
 }
 .artisan-dropdown-menu-dropped{
     display:block;
+}
+.artisan-dropdown-pos-left{
+    position: absolute;
+}
+.artisan-dropdown-pos-right{
+    position: absolute;
+}
+.artisan-dropdown-pos-full{
+    position: absolute;
+    width: 100%;
+    top: 59px;
 }
