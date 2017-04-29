@@ -1,8 +1,8 @@
 <div>
-    <div ng-if='responsive'>
+    <div ng-show='responsive'>
         <div class="nav">
             <a href='#'><div class='logoMobile'>MOBILE</div></a>
-            <a href='#' data-artisan-dropdown='#navDropMobile1'><!--<div class='mobile-menu'>|||</div>-->Test</a>
+            <a href='#'><div class='mobile-menu' data-artisan-dropdown='#navDropMobile1'>|||</div></a>
             <div id='navDropMobile1' class='artisan-dropdown-menu'>
                 <ul>
                     <a ui-sref='home'><li>Home</li></a>
@@ -16,9 +16,9 @@
         </div>
     </div>
     <!--Desktop+tablet goes on from here-->
-    <div ng-if='!responsive'>
-        <div class="main-container nav">
-            <ul>
+    <div ng-show='!responsive'>
+        <div class="nav">
+            <ul class='main-container'>
                 <a href='#'><li>LOGO</li></a>
                 <a ui-sref='home'><li>Find a job</li></a>
                 <a href="#"><li>Find resumes</li></a>
