@@ -1,27 +1,40 @@
 @include breakpoint(tablet) {
+    .main-container{
+        .col-9{
+            clear: both;
+            width: 100%;
+        }
+        .col-3{
+            float: right;
+            // width: 100%;
+        }
+    }
     .nav{
-       position: fixed;
-       background-color: $silver;
-       a {
-            font-family: $font-tr;
-            font-weight: bold;
-            li.btn-tab{
-                transition: all $fastDuration ease-in-out;
-                border-left: 2px solid $black;
-                border-right: 2px solid $black;
-                border-radius: 10%;
-                margin-right: 2px;
-                &:hover {
-                    background-color: $black;
-                    color:white;
-                }
-                 li.btn-register{
-                display:block;
-                }
-                li.btn-login{
-                display:block;
-                }
+        position: fixed;
+        background-color: $silver;
+        font-family: $font-tr;
+        font-weight: bold;
+        a li.btn-tab{
+            // float:left;
+            transition: all $fastDuration ease-in-out;
+            border-left: 2px solid $black;
+            border-right: 2px solid $black;
+            border-radius: 10%;
+            margin-right: 2px;
+            &:hover {
+                background-color: $black;
+                color:white;
             }
+        }
+        a li.btn-register{
+            // float: right;
+            color: white;
+            background-color: $black;
+        }
+        a li.btn-login{
+            // float: right;
+            color: white;
+            background-color: $black;
         }
    }
    .triangle{
