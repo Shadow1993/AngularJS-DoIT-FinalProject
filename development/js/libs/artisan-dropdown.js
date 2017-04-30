@@ -25,15 +25,16 @@
             function funcDrop(event) {
                 var myTarget = $(event.target).attr('data-artisan-dropdown');
                 if ($(myTarget).hasClass('artisan-dropdown-menu')) {
-                    $(myTarget).removeClass('artisan-dropdown-menu');
+                    funcHideAll();
                     $(myTarget).addClass('artisan-dropdown-menu-dropped');
+                    $(myTarget).removeClass('artisan-dropdown-menu');
                 } else {
                     funcHideAll();
                 }
             }
             $(window)
                 .on('resize', funcHideAll)
-                .on('click', funcHideAll)
+                // .on('click', funcHideAll)
                 .on('click', funcPos)
                 .on('click', funcDrop);
         });

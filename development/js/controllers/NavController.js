@@ -9,6 +9,7 @@
         vm.test = 'test';
 
         var $myWindow = $(window);
+        var mobMenu = $('#mobile-menu');
 
         var responsive = {
             tabletMin: 630,
@@ -37,12 +38,35 @@
         }
         displayMode();
 
-        $myWindow.on('resize', function() {
+        function funcDeActivate() {
+            mobMenu.text('|||');
+        }
 
-            responsive.current = $myWindow.width();
-            displayMode();
-            $scope.$apply();
-        });
+        function funcActivate() {
+            mobMenu.text('X');
+        }
 
+        function mobileButtonHandler() {
+            if (mobMenu.text() === 'X') {
+                funcDeActivate();
+            } else {
+                funcActivate();
+            }
+        }
+
+        $myWindow
+            .on('click', function(event) {
+                if (event.target.id !== 'mobile-menu') {
+                    funcDeActivate();
+                } else {
+                    mobileButtonHandler();
+                }
+            })
+            .on('resize', function() {
+                funcDeActivate();
+                responsive.current = $myWindow.width();
+                displayMode();
+                $scope.$apply();
+            });
     });
 }());
