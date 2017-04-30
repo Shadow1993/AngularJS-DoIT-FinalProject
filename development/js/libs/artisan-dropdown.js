@@ -32,8 +32,8 @@
                 }
             }
             $(window)
-                .on('resize', funcPos)
                 .on('resize', funcHideAll)
+                .on('click', funcHideAll)
                 .on('click', funcPos)
                 .on('click', funcDrop);
         });
