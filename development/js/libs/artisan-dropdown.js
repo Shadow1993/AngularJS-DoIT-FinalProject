@@ -3,16 +3,14 @@
     $(document)
         .ready(function() {
             function funcPos(event) {
-                var responsiveFix = $('.artisan-responsive').css('margin-left').replace(/[^-\d.]/g, '');
-                console.log(responsiveFix);
+                var responsiveFix = parseInt($('.artisan-responsive').css('margin-left'));
                 var eTarget = event.target;
                 var myTarget = $(event.target).attr('data-artisan-dropdown');
                 var positions = {
                     top: eTarget.offsetTop + eTarget.getBoundingClientRect().top + eTarget.offsetHeight,
-                    left: (eTarget.offsetLeft + responsiveFix) + (eTarget.offsetWidth / 4)
+                    left: eTarget.offsetLeft + responsiveFix + eTarget.offsetWidth * 0.25
                 };
-                console.log('top: ' + positions.top);
-                console.log('left: ' + positions.left);
+
                 if ($(myTarget).hasClass('artisan-dropdown-pos-left')) {
                     $(myTarget).css({
                         'top': positions.top,
