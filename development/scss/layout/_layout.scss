@@ -162,6 +162,12 @@ body {
 //      inside the partials in folder 'layout-media'
 
     //Phone
+    .nav-pos{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
     .nav-align-left{
         float: left;
     }

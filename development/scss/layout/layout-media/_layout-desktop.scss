@@ -1,6 +1,5 @@
 @include breakpoint(desktop) {
    .nav{
-        position: fixed;
         background-color: $silver;
         font-family: $font-tr;
         font-weight: bold;
