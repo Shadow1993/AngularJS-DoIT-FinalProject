@@ -28,6 +28,9 @@
                 cursor: pointer;
             }
         }
+        a li.btn-tab.font-change{
+                font-weight: 100;
+            }
         a li.btn-register{
             color: $white;
             background-color: $black;
