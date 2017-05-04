@@ -1,4 +1,14 @@
 @include breakpoint(desktop) {
+    //Modify Dropdown
+    .artisan-dropdown{
+        ul{
+            a{
+                li{
+                    background-color: red;
+                }
+            }
+        }
+    }
    .nav{
         background-color: $silver;
         font-family: $font-tr;

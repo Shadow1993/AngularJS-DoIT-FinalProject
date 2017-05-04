@@ -14,6 +14,17 @@ body {
     color: $black;
     background-color: $white;
 
+    //Modify Dropdown
+    .artisan-dropdown{
+        ul{
+            a{
+                li{
+                    background-color: red;
+                }
+            }
+        }
+    }
+
     /*-~- Grid Base -~-*/
     .main-container {
         max-width: 1280px;

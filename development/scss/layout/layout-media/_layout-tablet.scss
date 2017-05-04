@@ -1,4 +1,14 @@
 @include breakpoint(tablet) {
+    //Modify Dropdown
+    .artisan-dropdown{
+        ul{
+            a{
+                li{
+                    background-color: red;
+                }
+            }
+        }
+    }
     .main-container{
         direction:ltr;
         display:flex;
