@@ -30,7 +30,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
         },
         test: {
             name: 'testMain.test',
-            url: '/test',
+            url: '/findajob',
             templateUrl: './../templates/form.html'
         },
         test2: {
@@ -47,5 +47,5 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
         .state(states.test2);
 
     $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise('/test');
+    $urlRouterProvider.otherwise('/findajob');
 });
