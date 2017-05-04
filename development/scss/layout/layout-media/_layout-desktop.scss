@@ -4,7 +4,7 @@
         ul{
             a{
                 li{
-                    background-color: red;
+                    background-color: $grey;
                 }
             }
         }
@@ -56,4 +56,11 @@
    .triangle{
        font-size: 12px;
    }
+}
+
+.logo{
+    background-color: $grey;
+    width:100%;
+    height:200px;
+    background-image: url("C:\Users\DOIT_FEDN_USER2\Desktop\Gojkova Mustra\DOIT_Team2_FinalProject\client\images\img");
 }
