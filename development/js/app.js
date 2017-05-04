@@ -31,7 +31,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
         test: {
             name: 'testMain.test',
             url: '/test',
-            templateUrl: './../templates/test.html'
+            templateUrl: './../templates/form.html'
         },
         test2: {
             name: 'testMain.test2',
