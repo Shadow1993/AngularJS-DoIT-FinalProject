@@ -1,5 +1,5 @@
 <div>
-    <div ng-show='responsive'>
+    <div ng-if='responsive'>
         <div class="nav">
             <a href='#'><div class='logoMobile'>MOBILE</div></a>
             <a href='#'><div id='mobile-menu' data-artisan-dropdown='#navDropMobile1'>|||</div></a>
@@ -16,7 +16,7 @@
         </div>
     </div>
     <!--Desktop+tablet goes on from here-->
-    <div ng-show='!responsive'>
+    <div ng-if='!responsive'>
         <div class="nav">
             <div class='main-container artisan-responsive'>
                 <ul class='col-9'>
