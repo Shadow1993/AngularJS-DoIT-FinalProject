@@ -20,11 +20,22 @@
                 }
             }
             function funcHideAll() {
+                funcHideSub();
                 $('.artisan-dropdown-menu').slideUp();
             }
+            function funcHideSub() {
+                $('.artisan-dropdown-sub-menu').slideUp();
+            }
+
             function funcDrop(event) {
                 var myTarget = $(event.target).attr('data-artisan-dropdown');
-                if ($(myTarget).hasClass('artisan-dropdown-menu') && !$(myTarget).is(':visible')) {
+
+                if ($(myTarget).hasClass('artisan-dropdown-sub-menu') && !$(myTarget).is(':visible')) {
+                    funcHideSub();
+                    $(myTarget).slideDown();
+                } else if ($(myTarget).hasClass('artisan-dropdown-sub-menu') && $(myTarget).is(':visible')) {
+                    funcHideSub();
+                } else if ($(myTarget).hasClass('artisan-dropdown-menu') && !$(myTarget).is(':visible')) {
                     funcHideAll();
                     $(myTarget).slideDown();
                 } else {

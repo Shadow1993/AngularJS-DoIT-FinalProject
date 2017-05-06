@@ -1,7 +1,14 @@
 .artisan-dropdown{
+    position: relative;
+    max-height: 75vh;
+    overflow-y: scroll;
+    padding: 5px 10px;
     background-color: blue;
+    ul{
+        padding: 5px 10px;
+    }
     a li {
-        padding: 5px 20px;
+        margin: 2.5px 0;
         &:hover {
             background-color: grey;
             color: white;
@@ -26,4 +33,8 @@
     width: 100%;
     top: 59px;
     height: 100vh;
+    max-height: 100vh;
+}
+.artisan-dropdown-sub-menu{
+    display: none;
 }

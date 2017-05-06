@@ -6,12 +6,29 @@
         </div>
         <div id='navDropMobile1' class='artisan-dropdown-menu artisan-dropdown-pos-full artisan-dropdown'>
             <ul>
-                <a ui-sref='testMain.test'><li>Home</li></a>
-                <a ui-sref='testMain.test2'><li>How It Works</li></a>
-                <a href="#"><li>About Us</li></a>
-                <a href="#"><li>Link</li></a>
-                <a href="#"><li>Link</li></a>
-                <a href="#"><li>Link</li></a>
+                <a ui-sref='testMain.test'><li>Find a Job</li></a>
+                <a ui-sref='testMain.test2'><li>Find Resumes</li></a>
+                <a href="#"><li>Post a Job</li></a>
+                <a href="#"><li>
+                    <div data-artisan-dropdown='#navMobSubDrop1'>Pages <span class="triangle" data-artisan-dropdown='#navMobSubDrop1'>&#x25BC;</span></div>
+                    <ul id='navMobSubDrop1' class='artisan-dropdown-sub-menu artisan-dropdown'>
+                        <a ui-sref="testMain.test2"><li>About Us</li></a>
+                        <a href="#"><li>Contact Us</li></a>
+                        <a href="#"><li>Articles &amp; Blog</li></a>
+                        <a href="#"><li>Terms &amp; Privacy</li></a>
+                    </ul>
+                </li></a>
+                <a href="#"><li>
+                    <div data-artisan-dropdown='#navMobSubDrop2'>Features <span class="triangle" data-artisan-dropdown='#navMobSubDrop2'>&#x25BC;</span></div>
+                    <ul id='navMobSubDrop2' class='artisan-dropdown-sub-menu artisan-dropdown'>
+                        <a href="#"><li>Find a Job</li></a>
+                        <a href="#"><li>Job Details</li></a>
+                        <a href="#"><li>Find Resumes</li></a>
+                        <a href="#"><li>Resume Details</li></a>
+                        <a href="#"><li>Post a Job</li></a>
+                        <a href="#"><li>Company Profile</li></a>
+                    </ul>
+                </li></a>
             </ul>
         </div>
     </div>
@@ -20,9 +37,9 @@
         <div class="nav">
             <div class='main-container artisan-responsive'>
                 <ul class='col-8'>
-                    <a ui-sref='testMain.test'><li class="btn-tab">Find a job</li></a>
-                    <a href="#"><li class="btn-tab">Find resumes</li></a>
-                    <a href="#"><li class="btn-tab">Post a job</li></a>
+                    <a ui-sref='testMain.test'><li class="btn-tab">Find a Job</li></a>
+                    <a href="#"><li class="btn-tab">Find Resumes</li></a>
+                    <a href="#"><li class="btn-tab">Post a Job</li></a>
                     <a href='#'><li data-artisan-dropdown="#navDrop1" class="btn-tab font-change">Pages <span class="triangle">&#x25BC;</span></li></a>
                     <a href='#'><li data-artisan-dropdown="#navDrop2" class="btn-tab font-change">Features <span class="triangle">&#x25BC;</span></li></a>
                 </ul>
