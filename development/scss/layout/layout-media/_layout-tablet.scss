@@ -10,16 +10,15 @@
         }
     }
     .main-container{
+        float:right;
         direction:ltr;
         display:flex;
         flex-direction:column-reverse;
-        .col-9{
+        .col-8{
             width: 100%;
-
- }
-        .col-3{
-            width: 250px;
-        
+        }
+        .col-4{
+            width: 100%;
         }
     }
     .nav{

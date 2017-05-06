@@ -5,10 +5,12 @@
             function funcPos(event) {
                 var responsiveFix = parseInt($('.artisan-responsive').css('margin-left'));
                 var eTarget = event.target;
+                var eTargetTop = eTarget.getBoundingClientRect().top;
+                var eTargetLeft = eTarget.getBoundingClientRect().left;
                 var myTarget = $(event.target).attr('data-artisan-dropdown');
                 var positions = {
-                    top: eTarget.offsetTop + eTarget.getBoundingClientRect().top + eTarget.offsetHeight,
-                    left: eTarget.offsetLeft + responsiveFix + eTarget.offsetWidth * 0.25
+                    top: eTarget.offsetTop + eTargetTop + eTarget.offsetHeight,
+                    left: eTargetLeft + responsiveFix
                 };
 
                 if ($(myTarget).hasClass('artisan-dropdown-pos-left')) {
@@ -34,7 +36,6 @@
             }
             $(window)
                 .on('resize', funcHideAll)
-                // .on('click', funcHideAll)
                 .on('click', funcPos)
                 .on('click', funcDrop);
         });
