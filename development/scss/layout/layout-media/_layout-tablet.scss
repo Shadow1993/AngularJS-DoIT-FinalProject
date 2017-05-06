@@ -1,13 +1,7 @@
 @include breakpoint(tablet) {
     //Modify Dropdown
     .artisan-dropdown{
-        ul{
-            a{
-                li{
-                    background-color: yellow;
-                }
-            }
-        }
+        background-color: yellow;
     }
     .main-container{
         float:right;
@@ -18,6 +12,15 @@
             width: 100%;
         }
         .col-4{
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            .btn-login{
+                order: 2;
+            }
+            .btn-register{
+                order:1;
+            }
             width: 100%;
         }
     }
@@ -62,7 +65,7 @@
             padding: 3px 20px;
             border-radius: 10% 10%;
             margin-bottom: 7px;
-            margin-left:2px;
+            margin-right:2px;
             &:hover {
                 background-color: $white;
                 color:$black;
