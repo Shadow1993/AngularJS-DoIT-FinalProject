@@ -1,25 +1,19 @@
 .artisan-dropdown{
+    background-color: blue;
     a li {
         padding: 5px 20px;
-        background-color:$grey;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        font-size: 14px;
         &:hover {
-            background-color: $nonamecolor;
-            color: $white;
+            background-color: grey;
+            color: white;
         }
         &:active{
-            background-color: $nonamecolor2;
-            color:$black;
+            background-color: silver;
+            color: black;
         }
     }
 }
 .artisan-dropdown-menu{
     display:none;
-}
-.artisan-dropdown-menu-dropped{
-    display:block;
 }
 .artisan-dropdown-pos-left{
     position: absolute;
@@ -31,4 +25,5 @@
     position: absolute;
     width: 100%;
     top: 59px;
-} 
+    height: 100vh;
+}

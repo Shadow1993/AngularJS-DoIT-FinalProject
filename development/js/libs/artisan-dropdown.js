@@ -3,14 +3,13 @@
     $(document)
         .ready(function() {
             function funcPos(event) {
-                var responsiveFix = parseInt($('.artisan-responsive').css('margin-left'));
                 var eTarget = event.target;
                 var eTargetTop = eTarget.getBoundingClientRect().top;
                 var eTargetLeft = eTarget.getBoundingClientRect().left;
                 var myTarget = $(event.target).attr('data-artisan-dropdown');
                 var positions = {
                     top: eTarget.offsetTop + eTargetTop + eTarget.offsetHeight,
-                    left: eTargetLeft + responsiveFix
+                    left: eTargetLeft
                 };
 
                 if ($(myTarget).hasClass('artisan-dropdown-pos-left')) {
@@ -21,15 +20,13 @@
                 }
             }
             function funcHideAll() {
-                $('.artisan-dropdown-menu-dropped').addClass('artisan-dropdown-menu');
-                $('.artisan-dropdown-menu-dropped').removeClass('artisan-dropdown-menu-dropped');
+                $('.artisan-dropdown-menu').slideUp();
             }
             function funcDrop(event) {
                 var myTarget = $(event.target).attr('data-artisan-dropdown');
-                if ($(myTarget).hasClass('artisan-dropdown-menu')) {
+                if ($(myTarget).hasClass('artisan-dropdown-menu') && !$(myTarget).is(':visible')) {
                     funcHideAll();
-                    $(myTarget).addClass('artisan-dropdown-menu-dropped');
-                    $(myTarget).removeClass('artisan-dropdown-menu');
+                    $(myTarget).slideDown();
                 } else {
                     funcHideAll();
                 }
