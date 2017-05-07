@@ -2,7 +2,12 @@
     <div ng-if='responsive'>
         <div class="nav">
             <a href='#'><div class='logoMobile'>MOBILE</div></a>
-            <a href='#'><div id='mobile-menu' data-artisan-dropdown='#navDropMobile1'>|||</div></a>
+            <a href='#'><div id='mobile-menu' data-artisan-dropdown='#navDropMobile1'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div></a>
         </div>
         <div id='navDropMobile1' class='artisan-dropdown-menu artisan-dropdown-pos-full artisan-dropdown'>
             <ul>
@@ -31,6 +36,7 @@
                 </li></a>
             </ul>
         </div>
+        <script src='./scripts/libs/mobileNavHandler.js'></script>
     </div>
     <!--Desktop+tablet goes on from here-->
     <div ng-if='!responsive'>

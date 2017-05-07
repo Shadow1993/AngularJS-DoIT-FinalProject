@@ -1,0 +1,131 @@
+/*-~- Grid Base -~-*/
+.main-container {
+    max-width: 1280px;
+    // width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .col-1{
+        float: left;
+        position: relative;
+        width: 8%;
+        margin-right: .15%;
+        padding: 5px 0;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    .col-2 {
+        float: left;
+        position: relative;
+        width: 16%;
+        margin-right: .3%;
+        padding: 5px 0;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    .col-3 {
+        float: left;
+        position: relative;
+        width: 24%;
+        margin-right: .5%;
+        padding: 5px 0;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    .col-4 {
+        float: left;
+        position: relative;
+        width: 33%;
+        margin-right: .15%;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    .col-5 {
+        float: left;
+        position: relative;
+        width: 41%;
+        margin-right: .3%;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    .col-6 {
+        float: left;
+        position: relative;
+        width: 49%;
+        margin-right: .5%;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    .col-7 {
+        float: left;
+        position: relative;
+        width: 58%;
+        margin-right: .15%;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    .col-8 {
+        float: left;
+        position: relative;
+        width: 66%;
+        margin-right: .3%;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    .col-9 {
+        float: left;
+        position: relative;
+        width: 74%;
+        margin-right: .4%;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    .col-10 {
+        float: left;
+        position: relative;
+        width: 83%;
+        margin-right: 0.15%;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    .col-11 {
+        float: left;
+        position: relative;
+        width: 91%;
+        margin-right: .3%;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    .col-12 {
+        float: left;
+        position: relative;
+        width: 100%;
+    }
+}
