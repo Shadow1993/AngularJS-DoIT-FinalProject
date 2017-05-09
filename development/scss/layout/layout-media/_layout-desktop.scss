@@ -1,11 +1,21 @@
 @include breakpoint(desktop) {
     //Modify Dropdown
     .artisan-dropdown{
-        background-color: $grey;
+        border:1px solid #8888f7;
+        background-color: #669999;
+        ul{
+        padding: 1px;
+
         a{
             li{
+<<<<<<< HEAD
              }
+=======
+                padding: 4px;
+            }
+>>>>>>> c87dc74871bd7cf3910b95fb32a81dc722f247ca
         }
+    }
     }
    .nav{
         background: $gradient-bg;
