@@ -22,10 +22,9 @@
                 order:1;
             }
             width: 100%;
-        }
     }
     .nav{
-        background-color: green;
+        background-color:green;
         font-family: $font-tr;
         font-weight: bold;
         a li.btn-tab{
@@ -48,7 +47,7 @@
             float: right;
             color: $white;
             background-color: $black;
-            padding: 3px 25px;
+            padding: 3px 20px;
             border-radius: 10% 10%;
             margin-bottom: 7px;
             &:hover {
@@ -73,4 +72,5 @@
         }
    }
 }  
+}
 }

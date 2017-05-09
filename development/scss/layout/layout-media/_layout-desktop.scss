@@ -1,19 +1,26 @@
 @include breakpoint(desktop) {
     //Modify Dropdown
     .artisan-dropdown{
+        border:1px solid #8888f7;
+        background-color: #669999;
         ul{
-            a{
-                li{
-                    background-color: $grey;
-                }
+        padding: 1px;
+
+        a{
+            li{
+             
+                padding: 4px;
             }
         }
     }
+    }
+    }
    .nav{
-        background-color: $silver;
+        background: $gradient-bg;
         font-family: $font-tr;
         font-weight: bold;
         a li.btn-tab{
+            color:$white;
             transition: all $fastDuration ease-in-out;
             border-left: 2px solid $black;
             border-right: 2px solid $black;
@@ -22,7 +29,7 @@
             
             &:hover {
                 background-color: $black-rgba;
-                color:$white;
+                color: #ff9900;
                 cursor: pointer;
             }
         }
@@ -53,7 +60,6 @@
             }
         }
    }
-}
 
 .logo{
 
