@@ -1,4 +1,86 @@
-@include breakpoint(phone) {
-    //Styles go here
+//Phone Styles
 
+.nav-pos{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.nav-align-left{
+    float: left;
+}
+.nav-align-right{
+    float: right;
+}
+
+.nav{
+    transition: all 0.5s ease-in-out;
+    background-color: cyan;
+    padding: 15px;
+    width: 100%;
+    overflow: hidden;
+
+    .logoMobile{
+        padding: 2.5px 20px;
+        float: left;
+        width:95px;
+    }
+
+    ul{
+        li{
+            text-align: center;
+            padding: 5px;
+            margin-right: 4%;
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+        
+    }
+    
+    @include breakpoint(tablet) {
+        ul{
+            li{
+                float: left;
+            }
+        }
+    }
+    @include breakpoint(desktop) {
+        ul{
+            li{
+                float: left;
+            }
+        }
+    }
+}
+
+//Modify Dropdown
+.artisan-dropdown{
+    background-color: $navDropBgColor;
+    a {
+        li, div {
+            border: solid 1px lighten($navDropBgColor, 25);
+            border-radius: 10px;
+            margin: 5px 0;
+            padding: 10px 20px;
+            color: $navDropColor;
+            background-color: darken($navDropBgColor, 25);
+                &:hover, &:focus{
+                    background-color: lighten($navDropBgColor, 12);
+                }
+            }
+            div {
+                color: lighten($navDropBgColor, 25);
+            }
+    }
+}
+.mobileNavOpen{
+    background-color: $navDropBgColor;
+    color: lighten($navDropBgColor, 25);
+    .logoMobile {
+        color: lighten($navDropBgColor, 25);
+        background-color: darken($navDropBgColor, 25);
+        border: solid 1px lighten($navDropBgColor, 25);
+        border-radius: 10px;
+    }
 }
