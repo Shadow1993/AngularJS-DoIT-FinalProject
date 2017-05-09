@@ -1,19 +1,19 @@
 @include breakpoint(desktop) {
     //Modify Dropdown
     .artisan-dropdown{
-        ul{
-            a{
-                li{
-                    background-color: $grey;
-                }
+        background-color: $grey;
+        a{
+            li{
+                
             }
         }
     }
    .nav{
-        background-color: $silver;
+        background: $gradient-bg;
         font-family: $font-tr;
         font-weight: bold;
         a li.btn-tab{
+            color:$white;
             transition: all $fastDuration ease-in-out;
             border-left: 2px solid $black;
             border-right: 2px solid $black;
@@ -22,7 +22,7 @@
             
             &:hover {
                 background-color: $black-rgba;
-                color:$white;
+                color: #ff9900;
                 cursor: pointer;
             }
         }
