@@ -1,7 +1,18 @@
 @include breakpoint(tablet) {
     //Modify Dropdown
     .artisan-dropdown{
-        background-color: yellow;
+        border:1px solid #8888f7;
+        ul{
+        padding: 1px;
+
+        a{
+            li{
+             
+                padding: 4px;
+            }
+        }
+    
+    }
     }
     .main-container{
         float:right;
