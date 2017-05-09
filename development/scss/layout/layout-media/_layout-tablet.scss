@@ -1,18 +1,7 @@
 @include breakpoint(tablet) {
     //Modify Dropdown
     .artisan-dropdown{
-        border:1px solid #8888f7;
-        ul{
-        padding: 1px;
-
-        a{
-            li{
-             
-                padding: 4px;
-            }
-        }
-    
-    }
+        background-color: yellow;
     }
     .main-container{
         float:right;
@@ -33,9 +22,10 @@
                 order:1;
             }
             width: 100%;
+        }
     }
     .nav{
-        background-color: $gradient-bg;
+        background-color: green;
         font-family: $font-tr;
         font-weight: bold;
         a li.btn-tab{
@@ -58,7 +48,7 @@
             float: right;
             color: $white;
             background-color: $black;
-            padding: 3px 20px;
+            padding: 3px 25px;
             border-radius: 10% 10%;
             margin-bottom: 7px;
             &:hover {
@@ -83,5 +73,4 @@
         }
    }
 }  
-}
 }
