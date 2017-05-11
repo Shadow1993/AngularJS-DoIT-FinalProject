@@ -11,23 +11,6 @@
             funcHideSub();
             funcHideMain();
         };
-        // function funcPos(event) {
-        //     var eTarget = event.target;
-        //     var eTargetTop = eTarget.getBoundingClientRect().top;
-        //     var eTargetLeft = eTarget.getBoundingClientRect().left;
-        //     var myTarget = $(event.target).attr('data-artisan-dropdown');
-        //     var positions = {
-        //         top: eTarget.offsetTop + eTargetTop + eTarget.offsetHeight,
-        //         left: eTargetLeft
-        //     };
-
-        //     if ($(myTarget).hasClass('artisan-dropdown-pos-left')) {
-        //         $(myTarget).css({
-        //             'top': positions.top,
-        //             'left': positions.left
-        //         });
-        //     }
-        // }
 
         var funcDrop = function(event) {
             var eObj = {
