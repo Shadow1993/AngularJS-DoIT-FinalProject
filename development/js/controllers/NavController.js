@@ -11,8 +11,8 @@
         var $myWindow = $(window);
 
         var responsive = {
-            tabletMin: 630,
-            tabletMax: 896,
+            tabletMin: 600,
+            tabletMax: 1024,
             current: $myWindow.width(),
             mode: ''
         };
