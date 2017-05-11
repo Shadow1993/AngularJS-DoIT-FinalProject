@@ -1,25 +1,29 @@
 (function() {
-    $(document).ready(function() {
-        var definitions = {
-            nav: $('.nav'),
-            mobile: $('#mobile-menu')
-        };
-        var funcRemove = function() {
-            definitions.nav.removeClass('mobileNavOpen');
-            definitions.mobile.removeClass('open');
-        };
-        var funcToggle = function() {
-            definitions.nav.toggleClass('mobileNavOpen');
-            definitions.mobile.toggleClass('open');
-        };
-        definitions.mobile
-            .on('click', funcToggle);
-        $(window)
-            .on('resize', funcRemove)
-            .on('click', function(event) {
-                if (($(event.target).parents('#mobile-menu').attr('id') || event.target.id) !== 'mobile-menu') {
-                    funcRemove();
-                }
-            });
-    });
+    'use strict';
+
+    var funcRemove = function() {
+        $('.nav').removeClass('mobileNavOpen');
+        $('#mobile-menu').removeClass('open');
+    };
+
+    $(window)
+        .on('resize', funcRemove)
+        .on('click', function(event) {
+            var funcToggle = function() {
+                $('.nav').toggleClass('mobileNavOpen');
+                $('#mobile-menu').toggleClass('open');
+            };
+            var testFor = {
+                parent: $(event.target).parents('#mobile-menu').attr('id') === 'mobile-menu',
+                target: event.target.id === 'mobile-menu',
+                sub: $(event.target).hasClass('subDrop')
+            };
+            if (testFor.parent || testFor.target) {
+                funcToggle();
+            } else if (testFor.sub) {
+
+            } else {
+                funcRemove();
+            }
+        });
 }());
