@@ -2,12 +2,13 @@
     //Modify Dropdown
     .artisan-dropdown{
         border:1px solid #8888f7;
+        background: darken($navDropBgColor, 25);
         ul{
         padding: 1px;
 
         a{
             li{
-             
+             background: lighten($navDropBgColor,30);
                 padding: 4px;
             }
         }
