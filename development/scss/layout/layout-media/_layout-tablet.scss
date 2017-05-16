@@ -1,7 +1,7 @@
 @include breakpoint(tablet) {
     //Modify Dropdown
     .artisan-dropdown {
-        border: 1px solid #a7cfdf;
+        border: 1px solid #8888f7;
         ul {
             padding: 1px;
             a {
@@ -34,7 +34,7 @@
     }
 
     .nav{
-        background: $gradient-bg;
+        background:greenyellow;
         font-family: $font-tr;
         font-weight: bold;
         a li.btn-tab {
