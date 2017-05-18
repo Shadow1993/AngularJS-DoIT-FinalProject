@@ -3,7 +3,7 @@
 
     var app = angular.module('app');
 
-    app.controller('NavController', function($scope) {
+    app.controller('HeaderController', function($scope) {
 
         var vm = this;
         vm.test = 'test';

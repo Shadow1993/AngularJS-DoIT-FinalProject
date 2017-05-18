@@ -12,40 +12,44 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
                 '@': {
                     templateUrl: './../templates/home.html'
                 },
-                'navigation@home': {
-                    templateUrl: './../templates/navigation.html',
-                    controller: 'NavController',
-                    controllerAs: 'nav'
+                'header@home': {
+                    templateUrl: './../templates/header.html',
+                    controller: 'HeaderController',
+                    controllerAs: 'header'
                 },
-                'testMain@home': {
-                    templateUrl: './../templates/testMain.html'
+                'main@home': {
+                    templateUrl: './../templates/main.html'
                 }
             }
         },
-        testMain: {
-            name: 'testMain',
+        main: {
+            name: 'main',
             abstract: true,
             parent: 'home',
-            templateUrl: './../templates/testMain.html'
+            templateUrl: './../templates/main.html'
+        },
+        header: {
+            name: 'header',
+            parent: 'home',
+            templateUrl: './../templates/header.html'
+        },
+        jumbotron: {
+            name: 'header.jumbotron',
+            templateUrl: './../templates/jumbotron.html'
         },
         test: {
-            name: 'testMain.test',
-            url: '/findajob',
-            templateUrl: './../templates/form.html'
-        },
-        test2: {
-            name: 'testMain.test2',
-            url: '/test2',
-            templateUrl: './../templates/test2.html'
+            name: 'main.test',
+            url: '/test',
+            templateUrl: './../templates/test.html'
         }
     };
 
     $stateProvider
         .state(states.home)
-        .state(states.testMain)
-        .state(states.test)
-        .state(states.test2);
+        .state(states.main)
+        .state(states.jumbotron)
+        .state(states.test);
 
     $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise('/findajob');
+    $urlRouterProvider.otherwise('/');
 });
