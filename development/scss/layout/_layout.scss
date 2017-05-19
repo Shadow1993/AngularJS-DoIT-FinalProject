@@ -14,6 +14,10 @@ body {
     color: $black;
     background-color: $white;
 
+    .logo {
+        margin-top: 59px;
+    }
+
     //Include Grid-Base
     @import 'grid-base';
 

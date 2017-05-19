@@ -28,15 +28,6 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
             parent: 'home',
             templateUrl: './../templates/main.html'
         },
-        header: {
-            name: 'header',
-            parent: 'home',
-            templateUrl: './../templates/header.html'
-        },
-        jumbotron: {
-            name: 'header.jumbotron',
-            templateUrl: './../templates/jumbotron.html'
-        },
         test: {
             name: 'main.test',
             url: '/test',
@@ -47,7 +38,6 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     $stateProvider
         .state(states.home)
         .state(states.main)
-        .state(states.jumbotron)
         .state(states.test);
 
     $locationProvider.html5Mode(true);
