@@ -4,12 +4,16 @@
 
     "requireSemicolons": true,
     "requireParenthesesAroundIIFE": true,
-    "maximumLineLength": 120,
+    "maximumLineLength": 240,
     "validateLineBreaks": null, //CRFL or LF or null
     "validateIndentation": 4,
     "disallowTrailingComma": true,
     "disallowUnusedParams": true,
     "disallowMultipleVarDecl": false,
+
+    "disallowSpacesInAnonymousFunctionExpression": null,
+    "disallowSpacesInFunctionExpression": null,
+    "requireCamelCaseOrUpperCaseIdentifiers": false,
 
     "disallowSpacesInsideObjectBrackets": null,
     "disallowImplicitTypeConversion": ["string"],

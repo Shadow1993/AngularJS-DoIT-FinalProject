@@ -1,5 +1,11 @@
 module.exports = {
     PORT: 8080,            //Server Port
     PUBLIC: '/client/',    //Public Folder
-    HOMEFILE: 'index.html' //Default File to load
+    HOMEFILE: 'index.html', //Default File to load
+	// App Settings
+	MONGO_URI: process.env.MONGO_URI || 'localhost',
+	TOKEN_SECRET: process.env.TOKEN_SECRET || '381',
+
+	// OAuth 2.0
+	GOOGLE_SECRET: process.env.GOOGLE_SECRET || 'KasN5r9fA37WAPJbxiZ1U2pi',
 };
