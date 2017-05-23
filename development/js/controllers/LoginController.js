@@ -3,7 +3,7 @@
 
     var app = angular.module('app');
 
-    app.controller('LoginController', function($location, $auth) {
+    app.controller('LoginController', function($state, $auth) {
         var vm = this;
         vm.test = 'test';
 
@@ -11,7 +11,7 @@
             $auth.login(vm.user)
                 .then(function () {
                     toastr.success('You have successfully signed in!');
-                    $location.path('/');
+                    $state.go('main.test');
                 })
                 .catch(function (error) {
                     toastr.error(error.data.message, error.status);
@@ -21,7 +21,7 @@
             $auth.authenticate(provider)
                 .then(function () {
                     toastr.success('You have successfully signed in with ' + provider + '!');
-                    $location.path('/');
+                    $state.go('main.test');
                 })
                 .catch(function (error) {
                     if (error.message) {

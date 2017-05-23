@@ -7,7 +7,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider, $auth
     /**
      * Helper auth functions
      */
-    var skipIfLoggedIn = ['$q', '$auth', function($q, $auth) {
+    function skipIfLoggedIn($q, $auth) {
         var deferred = $q.defer();
         if ($auth.isAuthenticated()) {
             deferred.reject();
@@ -15,9 +15,9 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider, $auth
             deferred.resolve();
         }
         return deferred.promise;
-    }];
+    }
 
-    var loginRequired = ['$q', '$location', '$auth', function($q, $location, $auth) {
+    function loginRequired($q, $location, $auth) {
         var deferred = $q.defer();
         if ($auth.isAuthenticated()) {
             deferred.resolve();
@@ -25,7 +25,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider, $auth
             $location.path('/login');
         }
         return deferred.promise;
-    }];
+    }
 
     var states = {
         home: {
@@ -82,6 +82,12 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider, $auth
             resolve: {
                 loginRequired: loginRequired
             }
+        },
+        logout: {
+            name: 'main.logout',
+            url: '/logout',
+            template: null,
+            controller: 'LogoutController'
         }
     };
 
@@ -90,10 +96,11 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider, $auth
         .state(states.main)
         .state(states.test)
         .state(states.login)
+        .state(states.logout)
         .state(states.register)
         .state(states.profile);
 
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
 
     $authProvider.google({

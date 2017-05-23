@@ -67,51 +67,11 @@ app.use(cors());
 app.use(favicon((path.normalize(__dirname + serverConfig.PUBLIC + '/favicon.ico'))));
 //Logger(Morgan)
 app.use(logger('dev'));
+//Body Parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 //Express
 app.use(express.static(path.normalize(__dirname + serverConfig.PUBLIC)));
-//Angular HTML5 Mode
-app.all('/*', function (req, res) {
-    res.sendFile(path.normalize(__dirname + serverConfig.PUBLIC + serverConfig.HOMEFILE));
-});
-
-// Force HTTPS on Heroku
-if (app.get('env') === 'production') {
-    app.use(function (req, res, next) {
-        var protocol = req.get('x-forwarded-proto');
-        protocol === 'https' ? next() : res.redirect('https://' + req.hostname + req.url);
-    });
-}
-
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
-
-/*-~- Error Handlers -~- */
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function (err, req, res) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
-    });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function (err, req, res) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
-});
 
 /*
  |--------------------------------------------------------------------------
@@ -245,14 +205,12 @@ app.post('/auth/google', function (req, res) {
     request.post(accessTokenUrl, { json: true, form: params }, function (err, response, token) {
         var accessToken = token.access_token;
         var headers = { Authorization: 'Bearer ' + accessToken };
-        console.log('step 1');
 
         // Step 2. Retrieve profile information about the current user.
         request.get({ url: peopleApiUrl, headers: headers, json: true }, function (err, response, profile) {
             if (profile.error) {
                 return res.status(500).send({ message: profile.error.message });
             }
-            console.log('step 2');
             // Step 3a. Link user accounts.
             if (req.header('Authorization')) {
                 User.findOne({ google: profile.sub }, function (err, existingUser) {
@@ -319,7 +277,55 @@ app.post('/auth/unlink', ensureAuthenticated, function (req, res) {
     });
 });
 
+//Angular HTML5 Mode
+// app.all('/*', function (req, res) {
+//     res.sendFile(path.normalize(__dirname + serverConfig.PUBLIC + serverConfig.HOMEFILE));
+// });
+/********************
+    Some Handlers
+********************/
+
+// Force HTTPS on Heroku
+if (app.get('env') === 'production') {
+    app.use(function (req, res, next) {
+        var protocol = req.get('x-forwarded-proto');
+        protocol === 'https' ? next() : res.redirect('https://' + req.hostname + req.url);
+    });
+}
+
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
+/*-~- Error Handlers -~- */
+
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+    app.use(function (err, req, res) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
+    });
+}
+
+// // production error handler
+// // no stacktraces leaked to user
+app.use(function (err, req, res) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
+    });
+});
+
 /*-~- Server Start -~-*/
+app.set('host', process.env.NODE_IP || 'localhost');
 //Set port
 app.set('port', process.env.PORT || serverConfig.PORT);
 //Start server on port
