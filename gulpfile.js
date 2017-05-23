@@ -192,7 +192,7 @@ gulp.task('server', ['css', 'js'], function() {
     $.nodemon({
         script: config.pathsDev.server,
         ext: 'html scss js',
-        watch: [config.outputClient.client + '/**/*.html', config.pathsDev.scss, config.pathsDev.js],
+        watch: [config.outputClient.client + '/**/*.html', config.pathsDev.scss, config.pathsDev.js, config.pathsDev.server],
         env: {NODE_ENV : 'development'}
     })
         .on('change', ['js'])
@@ -210,6 +210,11 @@ gulp.task('server', ['css', 'js'], function() {
         return gulp
             .src(config.outputClient.client + '/index.html')
             .pipe($.livereload());
+    });
+
+    // watch app server
+    gulp.watch(config.pathsDev.server, ['js'], function() {
+        return logMsg('').pipe($.livereload());
     });
 
     // watch app scripts

@@ -3,7 +3,7 @@
 
     var app = angular.module('app');
 
-    app.controller('HeaderController', function($scope) {
+    app.controller('HeaderController', function($scope, $auth) {
 
         var vm = this;
         vm.test = 'test';
@@ -36,6 +36,8 @@
             }
         }
         displayMode();
+
+        console.log($auth.isAuthenticated());
 
         $myWindow
             .on('resize', function() {
