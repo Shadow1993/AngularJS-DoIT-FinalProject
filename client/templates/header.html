@@ -1,73 +1,144 @@
 <div ng-if='responsive'>
-    <div class="nav">
-        <a href='#'><div class='logoMobile'>MOBILE</div></a>
-        <a href='#'><div id='mobile-menu' data-artisan-dropdown='#navDropMobile1'>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div></a>
+    <div class="nav nav-pos">
+        <a href='#'>
+            <div class='logoMobile'>MOBILE</div>
+        </a>
+        <a href='#'>
+            <div id='mobile-menu' data-artisan-dropdown='#navDropMobile1'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
     </div>
+    <!-- DROP DOWNS -->
     <div id='navDropMobile1' class='artisan-dropdown-menu artisan-dropdown-pos-full artisan-dropdown'>
         <ul>
-            <a ui-sref='testMain.test'><li>Find a Job</li></a>
-            <a ui-sref='testMain.test2'><li>Find Resumes</li></a>
-            <a href="#"><li>Post a Job</li></a>
-            <a href="#"><li>
-                <div class='subDrop' data-artisan-dropdown='#navMobSubDrop1'>Pages <span class="triangle" data-artisan-dropdown='#navMobSubDrop1'>&#x25BC;</span></div>
-                <ul id='navMobSubDrop1' class='artisan-dropdown-sub-menu artisan-dropdown'>
-                    <a ui-sref="testMain.test2"><li>About Us</li></a>
-                    <a href="#"><li>Contact Us</li></a>
-                    <a href="#"><li>Articles &amp; Blog</li></a>
-                    <a href="#"><li>Terms &amp; Privacy</li></a>
-                </ul>
-            </li></a>
-            <a href="#"><li>
-                <div class='subDrop' data-artisan-dropdown='#navMobSubDrop2'>Features <span class="triangle" data-artisan-dropdown='#navMobSubDrop2'>&#x25BC;</span></div>
-                <ul id='navMobSubDrop2' class='artisan-dropdown-sub-menu artisan-dropdown'>
-                    <a href="#"><li>Find a Job</li></a>
-                    <a href="#"><li>Job Details</li></a>
-                    <a href="#"><li>Find Resumes</li></a>
-                    <a href="#"><li>Resume Details</li></a>
-                    <a href="#"><li>Post a Job</li></a>
-                    <a href="#"><li>Company Profile</li></a>
-                </ul>
-            </li></a>
+            <a ui-sref='testMain.test'>
+                <li>Find a Job</li>
+            </a>
+            <a ui-sref='testMain.test2'>
+                <li>Find Resumes</li>
+            </a>
+            <a href="#">
+                <li>Post a Job</li>
+            </a>
+            <a href="#">
+                <li>
+                    <div class='subDrop' data-artisan-dropdown='#navMobSubDrop1'>Pages <span class="triangle" data-artisan-dropdown='#navMobSubDrop1'>&#x25BC;</span></div>
+                    <ul id='navMobSubDrop1' class='artisan-dropdown-sub-menu artisan-dropdown'>
+                        <a ui-sref="testMain.test2">
+                            <li>About Us</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact Us</li>
+                        </a>
+                        <a href="#">
+                            <li>Articles &amp; Blog</li>
+                        </a>
+                        <a href="#">
+                            <li>Terms &amp; Privacy</li>
+                        </a>
+                    </ul>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <div class='subDrop' data-artisan-dropdown='#navMobSubDrop2'>Features <span class="triangle" data-artisan-dropdown='#navMobSubDrop2'>&#x25BC;</span></div>
+                    <ul id='navMobSubDrop2' class='artisan-dropdown-sub-menu artisan-dropdown'>
+                        <a href="#">
+                            <li>Find a Job</li>
+                        </a>
+                        <a href="#">
+                            <li>Job Details</li>
+                        </a>
+                        <a href="#">
+                            <li>Find Resumes</li>
+                        </a>
+                        <a href="#">
+                            <li>Resume Details</li>
+                        </a>
+                        <a href="#">
+                            <li>Post a Job</li>
+                        </a>
+                        <a href="#">
+                            <li>Company Profile</li>
+                        </a>
+                    </ul>
+                </li>
+            </a>
         </ul>
     </div>
 </div>
 <!--Desktop+tablet goes on from here-->
 <div ng-if='!responsive'>
-    <div class="nav">
+    <div class="nav nav-pos">
         <div class='main-container artisan-responsive'>
             <ul class='col-8'>
-                <a ui-sref='testMain.test'><li class="btn-tab">Find a Job</li></a>
-                <a href="#"><li class="btn-tab">Find Resumes</li></a>
-                <a href="#"><li class="btn-tab">Post a Job</li></a>
-                <a href='#'><li data-artisan-dropdown="#navDrop1" class="btn-tab font-change">Pages <span class="triangle">&#x25BC;</span></li></a>
-                <a href='#'><li data-artisan-dropdown="#navDrop2" class="btn-tab font-change">Features <span class="triangle">&#x25BC;</span></li></a>
+                <a ui-sref='testMain.test'>
+                    <li class="btn-tab">Find a Job</li>
+                </a>
+                <a href="#">
+                    <li class="btn-tab">Find Resumes</li>
+                </a>
+                <a href="#">
+                    <li class="btn-tab">Post a Job</li>
+                </a>
+                <a href='#'>
+                    <li data-artisan-dropdown="#navDrop1" class="btn-tab font-change">Pages <span class="triangle">&#x25BC;</span></li>
+                </a>
+                <a href='#'>
+                    <li data-artisan-dropdown="#navDrop2" class="btn-tab font-change">Features <span class="triangle">&#x25BC;</span></li>
+                </a>
             </ul>
             <ul class='col-4'>
-                <a ui-sref='main.login'><li class="btn-login">Login</li></a>
-                <a ui-sref='main.register'><li class="btn-register">Register</li></a>
+                <a ui-sref='main.login'>
+                    <li class="btn-login">Login</li>
+                </a>
+                <a ui-sref='main.register'>
+                    <li class="btn-register">Register</li>
+                </a>
             </ul>
         </div>
     </div>
+    <!-- DROP DOWNS -->
     <div id='navDrop1' class='artisan-dropdown-menu artisan-dropdown-pos-left artisan-dropdown'>
         <ul>
-            <a ui-sref="testMain.test2"><li>About Us</li></a>
-            <a href="#"><li>Contact Us</li></a>
-            <a href="#"><li>Articles &amp; Blog</li></a>
-            <a href="#"><li>Terms &amp; Privacy</li></a>
+            <a ui-sref="testMain.test2">
+                <li>About Us</li>
+            </a>
+            <a href="#">
+                <li>Contact Us</li>
+            </a>
+            <a href="#">
+                <li>Articles &amp; Blog</li>
+            </a>
+            <a href="#">
+                <li>Terms &amp; Privacy</li>
+            </a>
     </div>
     <div id='navDrop2' class='artisan-dropdown-menu artisan-dropdown-pos-left artisan-dropdown'>
         <ul>
-            <a href="#"><li>Find a Job</li></a>
-            <a href="#"><li>Job Details</li></a>
-            <a href="#"><li>Find Resumes</li></a>
-            <a href="#"><li>Resume Details</li></a>
-            <a href="#"><li>Post a Job</li></a>
-            <a href="#"><li>Company Profile</li></a>
+            <a href="#">
+                <li>Find a Job</li>
+            </a>
+            <a href="#">
+                <li>Job Details</li>
+            </a>
+            <a href="#">
+                <li>Find Resumes</li>
+            </a>
+            <a href="#">
+                <li>Resume Details</li>
+            </a>
+            <a href="#">
+                <li>Post a Job</li>
+            </a>
+            <a href="#">
+                <li>Company Profile</li>
+            </a>
         </ul>
     </div>
+    <div class="logo"></div>
 </div>
