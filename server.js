@@ -278,9 +278,9 @@ app.post('/auth/unlink', ensureAuthenticated, function (req, res) {
 });
 
 //Angular HTML5 Mode
-// app.all('/*', function (req, res) {
-//     res.sendFile(path.normalize(__dirname + serverConfig.PUBLIC + serverConfig.HOMEFILE));
-// });
+app.all('/*', function (req, res) {
+    res.sendFile(path.normalize(__dirname + serverConfig.PUBLIC + serverConfig.HOMEFILE));
+});
 /********************
     Some Handlers
 ********************/

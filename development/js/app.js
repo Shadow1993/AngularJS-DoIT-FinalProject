@@ -100,7 +100,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider, $auth
         .state(states.register)
         .state(states.profile);
 
-    // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
 
     $authProvider.google({
