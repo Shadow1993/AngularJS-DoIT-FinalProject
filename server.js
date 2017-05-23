@@ -245,12 +245,14 @@ app.post('/auth/google', function (req, res) {
     request.post(accessTokenUrl, { json: true, form: params }, function (err, response, token) {
         var accessToken = token.access_token;
         var headers = { Authorization: 'Bearer ' + accessToken };
+        console.log('step 1');
 
         // Step 2. Retrieve profile information about the current user.
         request.get({ url: peopleApiUrl, headers: headers, json: true }, function (err, response, profile) {
             if (profile.error) {
                 return res.status(500).send({ message: profile.error.message });
             }
+            console.log('step 2');
             // Step 3a. Link user accounts.
             if (req.header('Authorization')) {
                 User.findOne({ google: profile.sub }, function (err, existingUser) {
