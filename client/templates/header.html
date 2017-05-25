@@ -93,17 +93,19 @@
                 </a>
             </ul>
             <ul class='col-4'>
-                <a ui-sref='main.login'>
+                <a ng-if='!header.isAuth()' ui-sref='main.login'>
                     <li class="btn-login">Login</li>
                 </a>
-                <a ui-sref='main.register'>
+                <a ng-if='!header.isAuth()' ui-sref='main.register'>
                     <li class="btn-register">Register</li>
                 </a>
-                <ul>
-                    <a ui-sref="main.logout">
-                        <li>Logout</li>
+                <a ng-if='header.isAuth()'>
+                    <img ng-src='{{ header.profile.picture || "http://media.shopatron.com/media/img/no_image_available_US.png" }}' />
+                    {{header.profile.displayName}}
                     </a>
-                </ul>
+                <a ng-if='header.isAuth()' ui-sref="main.logout">
+                    <li class='btn-register'>Logout</li>
+                </a>
             </ul>
         </div>
     </div>

@@ -9,12 +9,12 @@
         vm.test = 'test';
 
         if (!$auth.isAuthenticated()) {
-            return;
+            return $state.go('main.test', {}, { reload: 'main.test' });
         }
         $auth.logout()
             .then(function () {
                 toastr.info('You have been logged out');
-                $state.go('main.test');
+                $state.go('main.test', {}, { reload: 'main.test' });
             });
     });
 }());

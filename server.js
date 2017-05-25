@@ -58,7 +58,7 @@ var User = mongoose.model('User', userSchema);
 
 mongoose.connect(serverConfig.MONGO_URI);
 mongoose.connection.on('error', function () {
-    console.log('Error: Could not connect to MongoDB. Did you forget to run `mongod`?'.red);
+    console.log('\x1b[31m Error: Could not connect to MongoDB. Did you forget to run `mongod`?');
 });
 
 //Cross-origin

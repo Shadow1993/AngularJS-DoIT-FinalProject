@@ -3,7 +3,9 @@
 
     var app = angular.module('app');
 
-    app.controller('HeaderController', function($scope, $auth) {
+    app.controller('HeaderController', ['$scope', '$auth', 'UserProfile', HeaderController]);
+
+    function HeaderController($scope, $auth, UserProfile) {
 
         var vm = this;
         vm.test = 'test';
@@ -37,7 +39,15 @@
         }
         displayMode();
 
-        console.log($auth.isAuthenticated());
+        vm.isAuth = function() {
+            return $auth.isAuthenticated();
+        };
+
+        UserProfile.getProfile()
+            .then(function(response) {
+                vm.profile = response;
+                console.log(response);
+            });
 
         $myWindow
             .on('resize', function() {
@@ -45,5 +55,5 @@
                 displayMode();
                 $scope.$apply();
             });
-    });
+    }
 }());
