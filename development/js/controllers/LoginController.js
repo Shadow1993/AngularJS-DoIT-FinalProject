@@ -3,7 +3,9 @@
 
     var app = angular.module('app');
 
-    app.controller('LoginController', function($state, $auth) {
+    app.controller('LoginController', ['$state', '$auth', LoginController]);
+
+    function LoginController($state, $auth) {
         var vm = this;
         vm.test = 'test';
 
@@ -35,5 +37,5 @@
                     }
                 });
         };
-    });
+    }
 }());

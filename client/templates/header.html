@@ -1,4 +1,5 @@
 <div ng-if='responsive'>
+    <div class='navbar-fixed-patch'></div>
     <div class="nav nav-pos">
         <a href='#'>
             <div class='logoMobile'>MOBILE</div>
@@ -15,54 +16,54 @@
     <!-- DROP DOWNS -->
     <div id='navDropMobile1' class='artisan-dropdown-menu artisan-dropdown-pos-full artisan-dropdown'>
         <ul>
-            <a ui-sref='testMain.test'>
+            <a ui-sref='main.findajob'>
                 <li>Find a Job</li>
             </a>
-            <a ui-sref='testMain.test2'>
+            <a ui-sref='main.findresumes'>
                 <li>Find Resumes</li>
             </a>
-            <a href="#">
+            <a ui-sref='main.postajob'>
                 <li>Post a Job</li>
             </a>
-            <a href="#">
+            <a href="javascript://">
                 <li>
                     <div class='subDrop' data-artisan-dropdown='#navMobSubDrop1'>Pages <span class="triangle" data-artisan-dropdown='#navMobSubDrop1'>&#x25BC;</span></div>
                     <ul id='navMobSubDrop1' class='artisan-dropdown-sub-menu artisan-dropdown'>
-                        <a ui-sref="testMain.test2">
+                        <a ui-sref='main.aboutus'>
                             <li>About Us</li>
                         </a>
-                        <a href="#">
+                        <a ui-sref='main.contactus'>
                             <li>Contact Us</li>
                         </a>
-                        <a href="#">
+                        <a ui-sref='main.articlesnblog'>
                             <li>Articles &amp; Blog</li>
                         </a>
-                        <a href="#">
+                        <a ui-sref='main.termsnprivacy'>
                             <li>Terms &amp; Privacy</li>
                         </a>
                     </ul>
                 </li>
             </a>
-            <a href="#">
+            <a href="javascript://">
                 <li>
                     <div class='subDrop' data-artisan-dropdown='#navMobSubDrop2'>Features <span class="triangle" data-artisan-dropdown='#navMobSubDrop2'>&#x25BC;</span></div>
                     <ul id='navMobSubDrop2' class='artisan-dropdown-sub-menu artisan-dropdown'>
-                        <a href="#">
+                        <a ui-sref='main.findajob'>
                             <li>Find a Job</li>
                         </a>
-                        <a href="#">
+                        <a ui-sref='main.jobdetails'>
                             <li>Job Details</li>
                         </a>
-                        <a href="#">
+                        <a ui-sref='main.findresumes'>
                             <li>Find Resumes</li>
                         </a>
-                        <a href="#">
+                        <a ui-sref='main.resumedetails'>
                             <li>Resume Details</li>
                         </a>
-                        <a href="#">
+                        <a ui-sref='main.postajob'>
                             <li>Post a Job</li>
                         </a>
-                        <a href="#">
+                        <a ui-sref='main.companyprofile'>
                             <li>Company Profile</li>
                         </a>
                     </ul>
@@ -73,22 +74,23 @@
 </div>
 <!--Desktop+tablet goes on from here-->
 <div ng-if='!responsive'>
+    <div class='navbar-fixed-patch'></div>
     <div class="nav nav-pos">
         <div class='main-container artisan-responsive'>
             <ul class='col-8'>
-                <a ui-sref='testMain.test'>
+                <a ui-sref='main.findajob'>
                     <li class="btn-tab">Find a Job</li>
                 </a>
-                <a href="#">
+                <a ui-sref='main.findresumes'>
                     <li class="btn-tab">Find Resumes</li>
                 </a>
-                <a href="#">
+                <a ui-sref='main.postajob'>
                     <li class="btn-tab">Post a Job</li>
                 </a>
-                <a href='#'>
+                <a href='javascript://'>
                     <li data-artisan-dropdown="#navDrop1" class="btn-tab font-change">Pages <span class="triangle">&#x25BC;</span></li>
                 </a>
-                <a href='#'>
+                <a href='javascript://'>
                     <li data-artisan-dropdown="#navDrop2" class="btn-tab font-change">Features <span class="triangle">&#x25BC;</span></li>
                 </a>
             </ul>
@@ -112,37 +114,37 @@
     <!-- DROP DOWNS -->
     <div id='navDrop1' class='artisan-dropdown-menu artisan-dropdown-pos-left artisan-dropdown'>
         <ul>
-            <a ui-sref="testMain.test2">
+            <a ui-sref='main.aboutus'>
                 <li>About Us</li>
             </a>
-            <a href="#">
+            <a ui-sref='main.contactus'>
                 <li>Contact Us</li>
             </a>
-            <a href="#">
+            <a ui-sref='main.articlesnblog'>
                 <li>Articles &amp; Blog</li>
             </a>
-            <a href="#">
+            <a ui-sref='main.termsnprivacy'>
                 <li>Terms &amp; Privacy</li>
             </a>
     </div>
     <div id='navDrop2' class='artisan-dropdown-menu artisan-dropdown-pos-left artisan-dropdown'>
         <ul>
-            <a href="#">
+            <a ui-sref='main.findajob'>
                 <li>Find a Job</li>
             </a>
-            <a href="#">
+            <a ui-sref='main.jobdetails'>
                 <li>Job Details</li>
             </a>
-            <a href="#">
+            <a ui-sref='main.findresumes'>
                 <li>Find Resumes</li>
             </a>
-            <a href="#">
+            <a ui-sref='main.resumedetails'>
                 <li>Resume Details</li>
             </a>
-            <a href="#">
+            <a ui-sref='main.postajob'>
                 <li>Post a Job</li>
             </a>
-            <a href="#">
+            <a ui-sref='main.companyprofile'>
                 <li>Company Profile</li>
             </a>
         </ul>

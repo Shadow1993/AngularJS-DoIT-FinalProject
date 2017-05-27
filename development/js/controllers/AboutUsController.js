@@ -3,9 +3,9 @@
 
     var app = angular.module('app');
 
-    app.controller('FooterController', ['$scope', FooterController]);
+    app.controller('AboutUsController', ['$scope', AboutUsController]);
 
-    function FooterController($scope) {
+    function AboutUsController($scope) {
         $scope.test = 'test';
     }
 }());
