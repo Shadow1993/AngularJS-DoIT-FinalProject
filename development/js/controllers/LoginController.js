@@ -9,11 +9,15 @@
         var vm = this;
         vm.test = 'test';
 
+        if ($auth.isAuthenticated()) {
+            $state.go('main.findajob');
+        }
+
         vm.login = function () {
             $auth.login(vm.user)
                 .then(function () {
                     toastr.success('You have successfully signed in!');
-                    $state.go('main.test');
+                    $state.path('main.findajob');
                 })
                 .catch(function (error) {
                     toastr.error(error.data.message, error.status);
@@ -23,7 +27,7 @@
             $auth.authenticate(provider)
                 .then(function () {
                     toastr.success('You have successfully signed in with ' + provider + '!');
-                    $state.go('main.test');
+                    $state.path('main.findajob');
                 })
                 .catch(function (error) {
                     if (error.message) {
