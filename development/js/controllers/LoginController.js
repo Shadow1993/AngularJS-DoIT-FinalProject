@@ -17,7 +17,7 @@
             $auth.login(vm.user)
                 .then(function () {
                     toastr.success('You have successfully signed in!');
-                    $state.path('main.findajob');
+                    $state.go('main.findajob');
                 })
                 .catch(function (error) {
                     toastr.error(error.data.message, error.status);
@@ -27,7 +27,7 @@
             $auth.authenticate(provider)
                 .then(function () {
                     toastr.success('You have successfully signed in with ' + provider + '!');
-                    $state.path('main.findajob');
+                    $state.go('main.findajob');
                 })
                 .catch(function (error) {
                     if (error.message) {

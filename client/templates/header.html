@@ -16,13 +16,22 @@
     <!-- DROP DOWNS -->
     <div id='navDropMobile1' class='artisan-dropdown-menu artisan-dropdown-pos-full artisan-dropdown'>
         <ul>
+            <a ng-if='!header.isAuth()' ui-sref='main.login'>
+                <li class="btn-login">Login</li>
+            </a>
+            <a ng-if='!header.isAuth()' ui-sref='main.register'>
+                <li class="btn-register">Register</li>
+            </a>
+            <a ng-if='header.isAuth()' ui-sref="main.logout">
+                <li class='btn-register'>Logout</li>
+            </a>
             <a ui-sref='main.findajob'>
                 <li>Find a Job</li>
             </a>
-            <a ui-sref='main.findresumes'>
+            <a ng-if='header.isAuth()' ui-sref='main.findresumes'>
                 <li>Find Resumes</li>
             </a>
-            <a ui-sref='main.postajob'>
+            <a ng-if='header.isAuth()' ui-sref='main.postajob'>
                 <li>Post a Job</li>
             </a>
             <a href="javascript://">
@@ -44,7 +53,7 @@
                     </ul>
                 </li>
             </a>
-            <a href="javascript://">
+            <a ng-if='header.isAuth()' href="javascript://">
                 <li>
                     <div class='subDrop' data-artisan-dropdown='#navMobSubDrop2'>Features <span class="triangle" data-artisan-dropdown='#navMobSubDrop2'>&#x25BC;</span></div>
                     <ul id='navMobSubDrop2' class='artisan-dropdown-sub-menu artisan-dropdown'>
@@ -81,16 +90,16 @@
                 <a ui-sref='main.findajob'>
                     <li class="btn-tab">Find a Job</li>
                 </a>
-                <a ui-sref='main.findresumes'>
+                <a ng-if='header.isAuth()' ui-sref='main.findresumes'>
                     <li class="btn-tab">Find Resumes</li>
                 </a>
-                <a ui-sref='main.postajob'>
+                <a ng-if='header.isAuth()' ui-sref='main.postajob'>
                     <li class="btn-tab">Post a Job</li>
                 </a>
                 <a href='javascript://'>
                     <li data-artisan-dropdown="#navDrop1" class="btn-tab font-change">Pages <span class="triangle">&#x25BC;</span></li>
                 </a>
-                <a href='javascript://'>
+                <a ng-if='header.isAuth()' href='javascript://'>
                     <li data-artisan-dropdown="#navDrop2" class="btn-tab font-change">Features <span class="triangle">&#x25BC;</span></li>
                 </a>
             </ul>
@@ -102,7 +111,7 @@
                     <li class="btn-register">Register</li>
                 </a>
                 <a ng-if='header.isAuth()'>
-                    <img ng-src='{{ header.profile.picture || "http://media.shopatron.com/media/img/no_image_available_US.png" }}' />
+                    <img style='height:32px; width:32px; border-radius: 50%' ng-src='{{ header.profile.picture || "http://media.shopatron.com/media/img/no_image_available_US.png" }}' />
                     {{header.profile.displayName}}
                     </a>
                 <a ng-if='header.isAuth()' ui-sref="main.logout">

@@ -1,1 +1,31 @@
-REGISTER
+<h2 class='text-center'>Sign up</h2>
+<form method='post' ng-submit='register.signup()' name='signupForm'>
+    <div ng-class='{ "has-error" : signupForm.displayName.$invalid && signupForm.displayName.$dirty }'>
+        <input type='text' name='displayName' ng-model='register.user.displayName' placeholder='Name' required autofocus>
+        <div ng-if='signupForm.displayName.$dirty' ng-messages='signupForm.displayName.$error'>
+            <div ng-message='required'>You must enter your name.</div>
+        </div>
+    </div>
+    <div ng-class='{ "has-error" : signupForm.email.$invalid && signupForm.email.$dirty }'>
+        <input type='email' id='email' name='email' ng-model='register.user.email' placeholder='Email' required>
+        <div ng-if='signupForm.email.$dirty' ng-messages='signupForm.email.$error'>
+            <div ng-message='required'>Your email address is required.</div>
+            <div ng-message='pattern'>Your email address is invalid.</div>
+        </div>
+    </div>
+    <div ng-class='{ "has-error" : signupForm.password.$invalid && signupForm.password.$dirty }'>
+        <input type='password' name='password' ng-model='register.user.password' placeholder='Password' required>
+        <div ng-if='signupForm.password.$dirty' ng-messages='signupForm.password.$error'>
+            <div ng-message='required'>Password is required.</div>
+        </div>
+    </div>
+    <div ng-class='{ "has-error" : signupForm.confirmPassword.$invalid && signupForm.confirmPassword.$dirty }'>
+        <input password-match='register.user.password' type='password' name='confirmPassword' ng-model='register.confirmPassword' placeholder='Confirm Password'>
+        <div ng-if='signupForm.confirmPassword.$dirty' ng-messages='signupForm.confirmPassword.$error'>
+            <div ng-message='compareTo'>Password must match.</div>
+        </div>
+    </div>
+    <p>By clicking on Sign up, you agree to <a href='#'>terms & conditions</a> and <a href='#'>privacy policy</a></p>
+    <button type='submit' ng-disabled='signupForm.$invalid'>Sign up</button>
+    <p>Already have an account? <a href='/#/login'>Log in now</a></p>
+</form>

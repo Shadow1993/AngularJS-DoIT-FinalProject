@@ -46,7 +46,6 @@
         UserProfile.getProfile()
             .then(function(response) {
                 vm.profile = response;
-                console.log(response);
             });
 
         $myWindow

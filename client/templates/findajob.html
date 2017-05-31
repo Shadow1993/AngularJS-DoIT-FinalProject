@@ -1,1 +1,24 @@
-FIND A JOB
+Jobs {{ jobs.jobs.length }}
+<div ng-repeat='job in jobs.jobs'>
+    <p><a ui-sref='main.jobdetails({id: job.jobId})'>{{ job.jobTitle }}</a></p>
+    <p>{{ job.jobCompany }} {{ job.jobTown }} {{ job.jobState }} {{ job.jobAddress }}</p>
+    <p>{{ job.jobDescription }}</p>
+</div>
+<div>
+    <p>Sort By: Relevance - Date</p>
+    <div>
+        Salary Estimate
+    </div>
+    <div>
+        Job Type
+    </div>
+    <div>
+        Title
+    </div>
+    <div>
+        Company
+    </div>
+    <div>
+        Location
+    </div>
+</div>

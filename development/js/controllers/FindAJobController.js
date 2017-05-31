@@ -3,9 +3,18 @@
 
     var app = angular.module('app');
 
-    app.controller('FindAJobController', ['$scope', FindAJobController]);
+    app.controller('FindAJobController', ['DataService', FindAJobController]);
 
-    function FindAJobController($scope) {
-        $scope.test = 'test';
+    function FindAJobController(DataService) {
+        var vm = this;
+        vm.test = 'test';
+
+        DataService.getJobs()
+            .then(function(response) {
+                vm.jobs = response;
+            })
+            .catch(function(response) {
+                throw response;
+            });
     }
 }());

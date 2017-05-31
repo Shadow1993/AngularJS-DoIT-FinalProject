@@ -1,1 +1,9 @@
-JOB DETAILS
+<div>
+    <h3>{{ job.job.jobTitle }}</h3>
+    <p>{{ job.job.jobType }} {{ job.job.jobTown }} {{ job.job.jobState }} {{ '$' + job.job.jobYearSalary + '.000' }}</p>
+    <h5>What you'll do:</h5>
+    <p>{{ job.job.jobWillDo }}</p>
+    <h5>What we're looking for:</h5>
+    <p>{{ job.job.jobWeLooking }}</p>
+    <p>{{ job.job.jobAdditionalDesc }}</p>
+</div>
