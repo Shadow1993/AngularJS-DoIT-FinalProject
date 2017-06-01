@@ -5,7 +5,7 @@
         <span>{{ job.jobCompany }}</span>
         <span>{{ job.jobTown }}</span>
         <span>{{ job.jobState }}</span>
-        <span>{{ job.jobAddress }}</span>
+        <span ng-show='job.jobAddress'>{{ job.jobAddress }}</span>
     </div>
     <p>{{ job.jobDescription }}</p>
 </div>
