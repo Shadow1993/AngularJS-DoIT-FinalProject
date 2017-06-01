@@ -88,3 +88,18 @@
         border-radius: 10px;
     }
 }
+
+.repeat-item {
+    padding: 5%;
+    p {
+        text-align: justify;
+    }
+    div {
+        padding: 1%;
+        span {
+                border: 1px solid $black;
+                padding: 1%;
+                margin: 1%;
+            }
+    }
+}

@@ -41,6 +41,25 @@
                 templateUrl: './../templates/login.html',
                 controller: 'LoginController',
                 controllerAs: 'login'
+                // resolve: {
+                //     nesto: function($q, $auth) {
+                //         var deferred = $q.defer();
+                //         console.log(deferred);
+                //         console.error('1');
+                //         if ($auth.isAuthenticated()) {
+                //             console.log(deferred);
+                //             console.error('2');
+                //             deferred.reject();
+                //         } else {
+                //             console.log(deferred);
+                //             console.error('3');
+                //             deferred.resolve();
+                //         }
+                //         console.log(deferred);
+                //         console.error('4');
+                //         return deferred.promise;
+                //     }
+                // }
             },
             register: {
                 name: 'main.register',

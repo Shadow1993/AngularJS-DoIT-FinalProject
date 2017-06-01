@@ -1,7 +1,12 @@
-Jobs {{ jobs.jobs.length }}
-<div ng-repeat='job in jobs.jobs'>
-    <p><a ui-sref='main.jobdetails({id: job.jobId})'>{{ job.jobTitle }}</a></p>
-    <p>{{ job.jobCompany }} {{ job.jobTown }} {{ job.jobState }} {{ job.jobAddress }}</p>
+<p>Jobs {{ jobs.jobs.length }}</p>
+<div class='repeat-item' ng-repeat='job in jobs.jobs'>
+    <h4><a ui-sref='main.jobdetails({id: job.jobId})'>{{ job.jobTitle }}</a></h4>
+    <div>
+        <span>{{ job.jobCompany }}</span>
+        <span>{{ job.jobTown }}</span>
+        <span>{{ job.jobState }}</span>
+        <span>{{ job.jobAddress }}</span>
+    </div>
     <p>{{ job.jobDescription }}</p>
 </div>
 <div>
