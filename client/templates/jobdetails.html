@@ -1,9 +1,7 @@
-<div>
-    <h3>{{ job.job.jobTitle }}</h3>
-    <p>{{ job.job.jobType }} {{ job.job.jobTown }} {{ job.job.jobState }} {{ '$' + job.job.jobYearSalary + '.000' }}</p>
-    <h5>What you'll do:</h5>
-    <p>{{ job.job.jobWillDo }}</p>
-    <h5 ng-show='job.job.jobWeLooking'>What we're looking for:</h5>
-    <p ng-show='job.job.jobWeLooking'>{{ job.job.jobWeLooking }}</p>
-    <p>{{ job.job.jobAdditionalDesc }}</p>
-</div>
+<h4>{{ job.job.jobTitle }}</h3>
+<p>{{ job.job.jobType }} {{ job.job.jobTown }} {{ job.job.jobState }} {{ '$' + job.job.jobYearSalary + '.000' }}</p>
+<h4>What you'll do:</h5>
+<p>{{ job.job.jobWillDo }}</p>
+<h4 ng-show='job.job.jobWeLooking'>What we're looking for:</h5>
+<p ng-show='job.job.jobWeLooking'>{{ job.job.jobWeLooking }}</p>
+<p>{{ job.job.jobAdditionalDesc }}</p>

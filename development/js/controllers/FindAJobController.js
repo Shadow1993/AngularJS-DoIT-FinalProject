@@ -3,11 +3,15 @@
 
     var app = angular.module('app');
 
-    app.controller('FindAJobController', ['DataService', FindAJobController]);
+    app.controller('FindAJobController', ['DataService', '$auth', '$state', FindAJobController]);
 
-    function FindAJobController(DataService) {
+    function FindAJobController(DataService, $auth, $state) {
         var vm = this;
         vm.test = 'test';
+
+        if (!$auth.isAuthenticated()) {
+            $state.go('main.login');
+        }
 
         DataService.getJobs()
             .then(function(response) {

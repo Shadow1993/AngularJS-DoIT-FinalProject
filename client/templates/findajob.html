@@ -1,15 +1,22 @@
-<p>Jobs {{ jobs.jobs.length }}</p>
-<div class='repeat-item' ng-repeat='job in jobs.jobs'>
-    <h4><a ui-sref='main.jobdetails({id: job.jobId})'>{{ job.jobTitle }}</a></h4>
-    <div>
-        <span>{{ job.jobCompany }}</span>
-        <span>{{ job.jobTown }}</span>
-        <span>{{ job.jobState }}</span>
-        <span ng-show='job.jobAddress'>{{ job.jobAddress }}</span>
-    </div>
-    <p>{{ job.jobDescription }}</p>
-</div>
 <div>
+    <div>
+        <p class='partial-info bold'>Jobs in Country</p>
+        <p class='partial-info'>{{ jobs.jobs.length }} Jobs Available</p>
+    </div>
+    <div class='repeat-item' ng-repeat='job in jobs.jobs'>
+        <div>
+            <h4><a ui-sref='main.jobdetails({id: job.jobId})'>{{ job.jobTitle }}</a></h4>
+            <div>
+                <span>{{ job.jobCompany }}</span>
+                <span>{{ job.jobTown }}</span>
+                <span>{{ job.jobState }}</span>
+                <span ng-show='job.jobAddress'>{{ job.jobAddress }}</span>
+            </div>
+            <p>{{ job.jobDescription }}</p>
+        </div>
+    </div>
+</div>
+<!--<div>
     <p>Sort By: Relevance - Date</p>
     <div>
         Salary Estimate
@@ -26,4 +33,4 @@
     <div>
         Location
     </div>
-</div>
+</div>-->

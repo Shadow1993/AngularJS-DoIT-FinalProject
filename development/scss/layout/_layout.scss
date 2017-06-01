@@ -17,6 +17,17 @@ body {
     .logo {
         margin-top: 59px;
     }
+    .float-left {
+        float: left;
+    }
+    .float-right {
+        float:  right;
+    }
+    .clear-all {
+        &:after {
+            clear: both;
+        }
+    }
 
     //Include Grid-Base
     @import 'grid-base';

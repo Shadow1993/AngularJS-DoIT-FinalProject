@@ -89,17 +89,21 @@
     }
 }
 
-.repeat-item {
-    padding: 5%;
-    p {
-        text-align: justify;
+// MAIN VIEW
+[ui-view='main'] {
+    padding:5%;
+    background-color: darken($white, 10);
+    .repeat-item {
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: $white;
+        padding: 5%;
+        margin-bottom: 2px;
     }
-    div {
-        padding: 1%;
-        span {
-                border: 1px solid $black;
-                padding: 1%;
-                margin: 1%;
-            }
+    h4 {
+        padding: 12px;
+    }
+    .partial-info {
+        display: inline-block;
     }
 }
