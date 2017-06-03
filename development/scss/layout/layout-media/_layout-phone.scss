@@ -93,7 +93,7 @@
 [ui-view='main'] {
     padding:5%;
     background-color: darken($white, 10);
-    .repeat-item {
+    .repeat-item, .jobdetails {
         border: 1px solid black;
         border-radius: 5px;
         background-color: $white;
