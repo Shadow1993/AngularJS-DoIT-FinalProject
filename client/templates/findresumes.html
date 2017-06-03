@@ -1,1 +1,16 @@
-FIND RESUMES
+<div>
+    <div>
+        <p class='partial-info bold'>Resumes in Country</p>
+        <p class='partial-info'>{{ resumes.resumes.length }} Resumes Available</p>
+    </div>
+    <div class='repeat-item' ng-repeat='resume in resumes.resumes'>
+        <div>
+            <h4><a ui-sref='main.resumedetails({id: resume.resumeId})'>{{ resume.resumeName }}</a></h4>
+            <div>
+                <span>{{ resume.resumeTown }}</span>
+                <span>{{ resume.resumeState }}</span>
+            </div>
+            <p>{{ resume.resumeDescription }}</p>
+        </div>
+    </div>
+</div>

@@ -92,7 +92,160 @@
                     jobCompanyImageUrl: '',
                     company_id: 5
                 }
+            ],
+            resumes: [
+                {
+                    resumeId: 1,
+                    resumeName: 'Bryon Czoch',
+                    resumeTown: 'Chicago',
+                    resumeState: 'IL',
+                    resumeJobTitleExp1: 'PHP developer',
+                    resumeJobCompanyExp1: 'Barcode Giant',
+                    resumeJobDateFromExp1: 'March 2014',
+                    resumeJobDateTillExp1: 'August 2014',
+                    resumeJobResposibilitesExp1: 'Magento/PHP development for a Point-of-sale equiptment dealer. I worked on setting up VMware ESX sandbox developer environment. I also built their quote system in Magento. They have 8 other websites that sell the same equipment so I also worked on keeping them up to date with the main website that brings in revenue. ',
+                    resumeJobSkilledUsedExp1: 'PHP, Javascript, XML, JSON, Linux Apache Mysql and Python',
+                    resumeJobTitleExp2: 'Programmer/Analyst II',
+                    resumeJobCompanyExp2: 'University of Chicago',
+                    resumeJobDateFromExp2: 'March 2012',
+                    resumeJobDateTillExp2: 'March 2012',
+                    resumeJobResposibilitesExp2: 'Extending/Customizing Zend Framework 2 based library search resource portal (http://myportal.domain.com) Maintaining legacy employee travel/training requisition system and division hours site',
+                    resumeJobSkilledUsedExp2: 'PHP, Javascript, XML, JSON, Linux Apache Mysql and Python',
+                    resumeJobTitleExp3: 'Programmer/Analyst II',
+                    resumeJobCompanyExp3: 'Web Developer/System Administrator',
+                    resumeJobDateFromExp3: 'March 2011',
+                    resumeJobDateTillExp3: 'March 2012',
+                    resumeJobResposibilitesExp3: 'Programming additions to the existing Ans.org website .Supporting/migrating Wordpress blog AnsNuclearCafe.org .Setup, support of Linux servers. Supporting operations of the organization w/ tech knowledge ',
+                    resumeJobSkilledUsedExp3: '',
+                    resumeEducation: 'Bachelor in Computer Science',
+                    resumeEducationSchool: 'Telkom University ',
+                    resumeSchoolTown: 'Bloomington, IN',
+                    resumeAdditionalInfoSkills: 'PHP 5, Perl and Python scripting,Java,SQL, Mysql, MongoDB,Revision control/source code management using Mercurial, GIT, RCS/CVS ,JavaScript Libraries,Apache Solr search engine ,Wordpress, Drupal, Joomla, Mambo, CMS ,Adobe Photoshop & GIMP ,Working in a Linux / Unix environment (shell scripting and command line utilities)',
+                    resumeImg: '',
+                    user_id: 1
+                },
+                {
+                    resumeId: 2,
+                    resumeName: 'Kinjal Gavadiya',
+                    resumeTown: 'San Jose',
+                    resumeState: 'CA',
+                    resumeJobTitleExp1: 'PHP Software Engineer',
+                    resumeJobCompanyExp1: 'Lexico Inc',
+                    resumeJobDateFromExp1: 'March 2016',
+                    resumeJobDateTillExp1: 'Present',
+                    resumeJobResposibilitesExp1: 'I worked in the PDFfiller company at the position of PHP developer. I worked on several sites and product apply. Example http://fill4forms.com/ I have experience of development on PHP without usage of Framework and CMS, optimization and writing of optimal performance code.',
+                    resumeJobSkilledUsedExp1: 'PHP, Javascript, XML, JSON, Linux Apache Mysql and Python',
+                    resumeJobTitleExp2: 'Web Developer',
+                    resumeJobCompanyExp2: 'University of Chicago',
+                    resumeJobDateFromExp2: 'March 2012',
+                    resumeJobDateTillExp2: 'March 2012',
+                    resumeJobResposibilitesExp2: 'Worked as part of a team to resolve issues with, as well as complete new projects for, customer portal used to provision cloud-based resources in our data center, as well as determine what services and resources they required.',
+                    resumeJobSkilledUsedExp2: '',
+                    resumeJobTitleExp3: '',
+                    resumeJobCompanyExp3: '',
+                    resumeJobDateFromExp3: '',
+                    resumeJobDateTillExp3: '',
+                    resumeJobResposibilitesExp3: '',
+                    resumeJobSkilledUsedExp3: '',
+                    resumeEducation: 'PhD in Computer Science',
+                    resumeEducationSchool: 'University of California ',
+                    resumeSchoolTown: 'San Jose, CA',
+                    resumeAdditionalInfoSkills: 'PHP Development (5 years), MSSQL (9 years), MYSql (5 years), MongoDB (1 year), Oracle DB (Less than 1 year), HTML (10+ years), CSS (8 years), Javascript (5 years), jQuery (5 years), Bootstrap (5 years), CodeIgniter Framework (4 years), Wordpress (1 year)',
+                    resumeImg: '',
+                    user_id: 2
+                },
+                {
+                    resumeId: 3,
+                    resumeName: 'Shivakumar Gudimalla',
+                    resumeTown: 'Conway,',
+                    resumeState: 'AR',
+                    resumeJobTitleExp1: 'PHP developer',
+                    resumeJobCompanyExp1: 'Implus Footcare, LLC ',
+                    resumeJobDateFromExp1: 'April 2017',
+                    resumeJobDateTillExp1: 'Present',
+                    resumeJobResposibilitesExp1: 'Maintain and update existing e-commerce websites for multiple brands of products, by updating existing code in a codeigniter PHP framework. Update and add functionality to an existing reports portal built in PHP.',
+                    resumeJobSkilledUsedExp1: 'PHP, Javascript, XML, JSON, Linux Apache Mysql and Python',
+                    resumeJobTitleExp2: 'Software Engineer',
+                    resumeJobCompanyExp2: 'EMS Management & Consultants ',
+                    resumeJobDateFromExp2: 'Jun 2016',
+                    resumeJobDateTillExp2: 'February 2017',
+                    resumeJobResposibilitesExp2: 'Primary projects included building web based application to manage client information and specifications, manage and report on client contact and relationship, replacing multiple manually managed spreadsheets. Secondary project was to build a web based application to assist and track outbound dialing campaign used to collect necessary customer information, replacing a shared spreadsheet. ',
+                    resumeJobSkilledUsedExp2: 'Applications were built in PHP, using the Yii2 framework and collecting and updating data in multiple MYSQL and MSSQL databases.',
+                    resumeJobTitleExp3: 'Web Developer',
+                    resumeJobCompanyExp3: 'Replacements, Ltd',
+                    resumeJobDateFromExp3: 'October 2015',
+                    resumeJobDateTillExp3: 'March 2016',
+                    resumeJobResposibilitesExp3: 'Worked as part of a team to update and maintain a large collection of static html pages, add new pages, as well as contribute to planning to migrating site over to a dynamic solution. I was given responsibility for refactoring and improving the codebase behind the site s search feature, and adding new features to the search functionality, improving how the front end communicates with and consumes the response from the Solr database. ',
+                    resumeJobSkilledUsedExp3: '',
+                    resumeEducation: 'Bachelor in Computer Science',
+                    resumeEducationSchool: 'State University of Arizona',
+                    resumeSchoolTown: 'Jacksville, AR',
+                    resumeAdditionalInfoSkills: 'PHP Advanced,MSSQL Advanced ,CSS Advanced, HTML Advanced ,Javascript Advanced,MySQL Medium ',
+                    resumeImg: '',
+                    user_id: 3
+                },
+                {
+                    resumeId: 4,
+                    resumeName: 'Dhaval Patel ',
+                    resumeTown: 'Las vegas',
+                    resumeState: 'NV',
+                    resumeJobTitleExp1: 'PHP Programmer',
+                    resumeJobCompanyExp1: 'Kizzang',
+                    resumeJobDateFromExp1: 'November 2014',
+                    resumeJobDateTillExp1: 'Present',
+                    resumeJobResposibilitesExp1: ' Rewrote most of the existing DB Schema and added several other tables .Wrote the entire admin from scratch(PHP), rewrote the main API(PHP), and fixed issues in our slot API(Coffeescript) .Maintained 95 EC2 servers along with Redis Clusters, Memcache, RDS and load balancers .Optimized both API and MySQL to improve overall through put by over 300% .Wrote several reports to help our Management team to better make decisions .Wrote extensive Cron system to automate several tasks and keep the site working correctly .Worked with the following 3rd party APIs: Google, OneSignal, Twilio, Paypal, E-Mercury, RightSignature, SmartyStreets, AWS, and Quickbooks .Managed the deployment system that consisted of Chef, Jenkins, and Boto ',
+                    resumeJobSkilledUsedExp1: 'PHP, LAMP, MySQL, CodeIgniter, AWS, Coffeescript, Ruby, Python ',
+                    resumeJobTitleExp2: 'Software Engineer',
+                    resumeJobCompanyExp2: 'Red Mercury Entertainment',
+                    resumeJobDateFromExp2: 'July 2014',
+                    resumeJobDateTillExp2: 'October 2014',
+                    resumeJobResposibilitesExp2: ' Wrote entire site in less than a month including DB Schema .Site: dev.lvticketsnow.com .Did the User Login classes for the site in Laravel .Created the entire site using Bootstrap 3.0 and JQuery .Also, wrote the entire Administrative console dev.lvticketsnow.com (No longer available)',
+                    resumeJobSkilledUsedExp2: 'PHP, LAMP, MySQL, Laravel, Angular.js ',
+                    resumeJobTitleExp3: 'Sr. Software Engineer',
+                    resumeJobCompanyExp3: 'Piping Rock Health Products',
+                    resumeJobDateFromExp3: 'May 2013',
+                    resumeJobDateTillExp3: 'June 2014',
+                    resumeJobResposibilitesExp3: ' Helped fix their e-commerce site (www.pipingrock.com) .Optimized DB structure for optimal performance .Wrote numerous financial and inventory reports .Did massive amounts of DB data cleanup / normalization .Helped with rewriting the site for faster operation and code normalization . Added Paypal to the payment options of the site',
+                    resumeJobSkilledUsedExp3: 'PHP, LAMP, MySQL, Jira, Jenkins/Hudsen, Doctrine 2, Symfony ',
+                    resumeEducation: 'Bachelor s in BSEET',
+                    resumeEducationSchool: 'DeVry Institute of Technology ',
+                    resumeSchoolTown: 'Phoenix, AR',
+                    resumeAdditionalInfoSkills: '',
+                    resumeImg: '',
+                    user_id: 4
+                },
+                {
+                    resumeId: 5,
+                    resumeName: 'Mike Zaloznyy ',
+                    resumeTown: 'Raleigh',
+                    resumeState: 'NC',
+                    resumeJobTitleExp1: 'Full Stack PHP Web Developer',
+                    resumeJobCompanyExp1: 'Bolide Technology Group ',
+                    resumeJobDateFromExp1: 'October 2016',
+                    resumeJobDateTillExp1: 'Present',
+                    resumeJobResposibilitesExp1: 'Led a 8-persons team to develop nutrition food website, front end design using WordPress, Photoshop and Dreamweaver, back end design using PHP and MySQL. Built website as a full stack developer using HTML and CSS and used JSP for web application with java hibernate+struts framework and connect website to Microsoft SQL Server.',
+                    resumeJobSkilledUsedExp1: '',
+                    resumeJobTitleExp2: 'Software Engineer',
+                    resumeJobCompanyExp2: 'Red Mercury Entertainment',
+                    resumeJobDateFromExp2: 'July 2015',
+                    resumeJobDateTillExp2: 'October 2016',
+                    resumeJobResposibilitesExp2: '  Analyzed requirements, quantified functional specifications, as well as usability criteria.Designed UX including mockups, wireframes and storyboard (sitemap) .Developed the application using HTML, CSS, JavaScript, PHP, MySQL and Apache Web Server. Utilized AJAX for RESTful web services, Twitter Bootstrap for UI .Implemented interactive UI with jQuery and jQuery UI for functionalities like drag and drop, progressbar and easing .Installed, configured, managed a development blog using WordPress .Worked closely with designers to ensure design requirements .Worked in a Scrum team .Managed code repository on GitHub ',
+                    resumeJobSkilledUsedExp2: 'HTML, CSS, JavaScript, jQuery, jQuery UI, Bootstrap 2, AJAX, Restful service, PHP, Apache, MySQL, WordPress 2.7, Axure, GitHub',
+                    resumeJobTitleExp3: '',
+                    resumeJobCompanyExp3: '',
+                    resumeJobDateFromExp3: '',
+                    resumeJobDateTillExp3: '',
+                    resumeJobResposibilitesExp3: ' ',
+                    resumeJobSkilledUsedExp3: '',
+                    resumeEducation: 'Master of Science in Information System',
+                    resumeEducationSchool: 'California State University Los Angeles',
+                    resumeSchoolTown: 'Los Angeles, CA',
+                    resumeAdditionalInfoSkills: 'PHP (5, 4.x), JavaScript, Java, Objective-C, MySQL 5.x, Oracle database 12c, Microsoft ,Perl 5.x, bash, C (99), ActionScript 3, PL/SQL,SQL Server 11 & 12\ ',
+                    resumeImg: '',
+                    user_id: 5
+                }
             ]
+
         };
         //jscs:enable
 
@@ -119,6 +272,31 @@
                 }
             }
             return [200, job, {}];
+        }
+
+        var resumes = '/api/resumes';
+        $httpBackend.whenGET(resumes).respond(allData.resumes);
+
+        var resume = new RegExp(resumes + '/[0-9]*');
+        $httpBackend.whenGET(resume).respond(resumeDetails);
+
+        function resumeDetails(method, url) {
+            var resume = {
+                resumeId: 0
+            };
+            var params = url.split('/');
+            var len = params.length;
+            var id = params[len - 1];
+
+            if (id > 0) {
+                for (var i = 0; i < allData.resumes.length; i++) {
+                    if (allData.resumes[i].resumeId === Number(id)) {
+                        resume = allData.resumes[i];
+                        break;
+                    }
+                }
+            }
+            return [200, resume, {}];
         }
 
         //Pass Through

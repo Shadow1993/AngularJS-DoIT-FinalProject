@@ -9,7 +9,9 @@
 
         return {
             getJobs: getJobs,
-            getJob: getJob
+            getJob: getJob,
+            getResumes: getResumes,
+            getResume: getResume
         };
 
         function getJobs() {
@@ -29,6 +31,32 @@
             return $http({
                 method: 'GET',
                 url: '/api/jobs/' + id
+            })
+            .then(function(response) {
+                return response.data;
+            })
+            .catch(function(response) {
+                return $q.reject('Error: ' + response);
+            });
+        }
+
+        function getResumes() {
+            return $http({
+                method: 'GET',
+                url: '/api/resumes'
+            })
+            .then(function(response) {
+                return response.data;
+            })
+            .catch(function(response) {
+                return $q.reject('Error: ' + response.status);
+            });
+        }
+
+        function getResume(id) {
+            return $http({
+                method: 'GET',
+                url: '/api/resume/' + id
             })
             .then(function(response) {
                 return response.data;
