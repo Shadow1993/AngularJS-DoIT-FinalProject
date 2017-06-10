@@ -10,7 +10,7 @@
         <input type='email' id='email' name='email' ng-model='register.user.email' placeholder='Email' required>
         <div ng-if='signupForm.email.$dirty' ng-messages='signupForm.email.$error'>
             <div ng-message='required'>Your email address is required.</div>
-            <div ng-message='pattern'>Your email address is invalid.</div>
+            <div ng-message='email'>Your email address is invalid.</div>
         </div>
     </div>
     <div ng-class='{ "has-error" : signupForm.password.$invalid && signupForm.password.$dirty }'>
@@ -27,5 +27,5 @@
     </div>
     <p>By clicking on Sign up, you agree to <a href='#'>terms & conditions</a> and <a href='#'>privacy policy</a></p>
     <button type='submit' ng-disabled='signupForm.$invalid'>Sign up</button>
-    <p>Already have an account? <a href='/#/login'>Log in now</a></p>
+    <p>Already have an account? <a ui-sref='main.login'>Log in now</a></p>
 </form>

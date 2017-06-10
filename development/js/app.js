@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var app = angular.module('app', ['ui.router', 'satellizer', 'DataMock']);
+    var app = angular.module('app', ['ui.router', 'satellizer', 'DataMock', 'ngMessages']);
 
     app.config(function ($authProvider) {
 
