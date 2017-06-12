@@ -56,7 +56,7 @@
         function getResume(id) {
             return $http({
                 method: 'GET',
-                url: '/api/resume/' + id
+                url: '/api/resumes/' + id
             })
             .then(function(response) {
                 return response.data;

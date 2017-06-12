@@ -3,9 +3,10 @@
 
     var app = angular.module('app');
 
-    app.controller('PostAJobController', ['$scope', PostAJobController]);
+    app.controller('PostAJobController', [PostAJobController]);
 
-    function PostAJobController($scope) {
-        $scope.test = 'test';
+    function PostAJobController() {
+        var vm = this;
+        vm.test = 'test';
     }
 }());

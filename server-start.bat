@@ -6,7 +6,7 @@ call npm -v
 echo 'If this returned an error, please check if you have node.js installed'
 
 echo 'Downloading npm dependencies..'
-call npm i
+call npm install
 echo 'Complete!'
 
 echo 'Bower Version'
@@ -14,7 +14,7 @@ call bower -v
 echo 'If this returned error, please check if you have bower installed globally'
 
 echo 'Downloading bower dependencies..'
-call bower i
+call bower install
 echo 'Complete!
 
 echo 'Starting server..'

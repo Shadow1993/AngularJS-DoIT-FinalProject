@@ -138,7 +138,7 @@
             },
             resumedetails: {
                 name: 'main.resumedetails',
-                url: '/resumedetails',
+                url: '/resumedetails/:id',
                 templateUrl: './../templates/resumedetails.html',
                 controller: 'ResumeDetailsController',
                 controllerAs: 'resume'
