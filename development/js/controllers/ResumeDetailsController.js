@@ -16,6 +16,6 @@
             })
             .catch(function(res) {
                 console.error(res);
-            })
+            });
     }
 }());
