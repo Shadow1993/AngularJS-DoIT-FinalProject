@@ -3,12 +3,17 @@
 
     var app = angular.module('app');
 
-    app.controller('HeaderController', ['$scope', '$auth', 'UserProfile', HeaderController]);
+    app.controller('HeaderController', ['$scope', '$auth', 'DataService', 'UserProfile', HeaderController]);
 
-    function HeaderController($scope, $auth, UserProfile) {
+    function HeaderController($scope, $auth, DataService, UserProfile) {
 
         var vm = this;
         vm.test = 'test';
+
+        DataService.authorize()
+            .then(function(res) {
+                vm.user = res;
+            });
 
         var $myWindow = $(window);
 

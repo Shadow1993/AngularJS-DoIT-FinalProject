@@ -244,8 +244,21 @@
                     resumeImg: '',
                     user_id: 5
                 }
+            ],
+            users: [
+                {
+                    userId: 1,
+                    username: 'Pera',
+                    password: '123',
+                    role: 'User'
+                },
+                {
+                    userId: 2,
+                    username: 'Ana',
+                    password: '123',
+                    role: 'Manager'
+                }
             ]
-
         };
         //jscs:enable
 
@@ -298,6 +311,9 @@
             }
             return [200, resume, {}];
         }
+
+        var authorize = '/user/authorize';
+        $httpBackend.whenPOST(authorize).respond(allData.users[1]);
 
         //Pass Through
         $httpBackend.whenGET(/\.html$/).passThrough();

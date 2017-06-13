@@ -11,20 +11,25 @@
             getJobs: getJobs,
             getJob: getJob,
             getResumes: getResumes,
-            getResume: getResume
+            getResume: getResume,
+            authorize: authorize
         };
+
+        function ReturnError(response) {
+            return $q.reject('Error: ' + response.status);
+        }
+
+        function ReturnData(response) {
+            return response.data;
+        }
 
         function getJobs() {
             return $http({
                 method: 'GET',
                 url: '/api/jobs'
             })
-            .then(function(response) {
-                return response.data;
-            })
-            .catch(function(response) {
-                return $q.reject('Error: ' + response.status);
-            });
+                .then(ReturnData)
+                .catch(ReturnError);
         }
 
         function getJob(id) {
@@ -32,12 +37,8 @@
                 method: 'GET',
                 url: '/api/jobs/' + id
             })
-            .then(function(response) {
-                return response.data;
-            })
-            .catch(function(response) {
-                return $q.reject('Error: ' + response);
-            });
+                .then(ReturnData)
+                .catch(ReturnError);
         }
 
         function getResumes() {
@@ -45,12 +46,8 @@
                 method: 'GET',
                 url: '/api/resumes'
             })
-            .then(function(response) {
-                return response.data;
-            })
-            .catch(function(response) {
-                return $q.reject('Error: ' + response.status);
-            });
+                .then(ReturnData)
+                .catch(ReturnError);
         }
 
         function getResume(id) {
@@ -58,12 +55,17 @@
                 method: 'GET',
                 url: '/api/resumes/' + id
             })
-            .then(function(response) {
-                return response.data;
+                .then(ReturnData)
+                .catch(ReturnError);
+        }
+
+        function authorize() {
+            return $http({
+                method: 'POST',
+                url: '/user/authorize'
             })
-            .catch(function(response) {
-                return $q.reject('Error: ' + response);
-            });
+                .then(ReturnData)
+                .catch(ReturnError);
         }
     }
 }());

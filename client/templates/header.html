@@ -87,7 +87,7 @@
                 <a ng-if='header.isAuth()' ui-sref='main.findresumes'>
                     <li class="btn-tab">Find Resumes</li>
                 </a>
-                <a ng-if='header.isAuth()' ui-sref='main.postajob'>
+                <a ng-if='header.user.role === "Manager"' ng-if='header.isAuth()' ui-sref='main.postajob'>
                     <li class="btn-tab">Post a Job</li>
                 </a>
                 <a href='javascript://'>
