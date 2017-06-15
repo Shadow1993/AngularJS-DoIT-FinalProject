@@ -31,7 +31,7 @@
             <a ng-if='header.isAuth()' ui-sref='main.findresumes'>
                 <li>Find Resumes</li>
             </a>
-            <a ng-if='header.isAuth()' ui-sref='main.postajob'>
+            <a ng-if='header.user.role === "Manager"' ng-if='header.isAuth()' ui-sref='main.postajob'>
                 <li>Post a Job</li>
             </a>
             <a href="javascript://">
@@ -63,10 +63,10 @@
                         <a ui-sref='main.findresumes'>
                             <li>Find Resumes</li>
                         </a>
-                        <a ui-sref='main.postajob'>
+                        <a ng-if='header.user.role === "Manager"' ui-sref='main.postajob'>
                             <li>Post a Job</li>
                         </a>
-                        <a ui-sref='main.companyprofile'>
+                        <a ng-if='header.user.role === "Manager"' ui-sref='main.companyprofile'>
                             <li>Company Profile</li>
                         </a>
                     </ul>
@@ -135,19 +135,13 @@
             <a ui-sref='main.findajob'>
                 <li>Find a Job</li>
             </a>
-            <a ui-sref='main.jobdetails'>
-                <li>Job Details</li>
-            </a>
             <a ui-sref='main.findresumes'>
                 <li>Find Resumes</li>
             </a>
-            <a ui-sref='main.resumedetails'>
-                <li>Resume Details</li>
-            </a>
-            <a ui-sref='main.postajob'>
+            <a ng-if='header.user.role === "Manager"' ui-sref='main.postajob'>
                 <li>Post a Job</li>
             </a>
-            <a ui-sref='main.companyprofile'>
+            <a ng-if='header.user.role === "Manager"' ui-sref='main.companyprofile'>
                 <li>Company Profile</li>
             </a>
         </ul>

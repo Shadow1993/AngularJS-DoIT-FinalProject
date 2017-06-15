@@ -313,7 +313,7 @@
         }
 
         var authorize = '/user/authorize';
-        $httpBackend.whenPOST(authorize).respond(allData.users[1]);
+        $httpBackend.whenPOST(authorize).respond(allData.users[0]);
 
         //Pass Through
         $httpBackend.whenGET(/\.html$/).passThrough();
