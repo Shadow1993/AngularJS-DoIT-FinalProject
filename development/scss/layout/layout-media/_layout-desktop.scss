@@ -79,3 +79,20 @@
         }
     }
 }
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  label {
+      font-weight:bold;
+  }
+  input {
+    padding-left:2px;
+    width:100%;
+  }
+  textarea{
+      width:100%;
+      padding-left:2px;
+  }
+}

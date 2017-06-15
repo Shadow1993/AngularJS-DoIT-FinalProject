@@ -67,5 +67,16 @@
                 .then(ReturnData)
                 .catch(ReturnError);
         }
+
+        function createCompany(data) {
+            return $http({
+                method: 'POST',
+                data: data,
+                url: 'https://89.216.54.220:44321/company/create'
+            })
+            .then(ReturnData)
+            .catch(ReturnError);
+        }
+
     }
 }());
