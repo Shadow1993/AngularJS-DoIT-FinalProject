@@ -12,7 +12,8 @@
             getJob: getJob,
             getResumes: getResumes,
             getResume: getResume,
-            authorize: authorize
+            authorize: authorize,
+            createCompany: createCompany
         };
 
         function ReturnError(response) {

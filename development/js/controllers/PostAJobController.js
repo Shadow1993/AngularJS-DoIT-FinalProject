@@ -3,20 +3,10 @@
 
     var app = angular.module('app');
 
-    app.controller('PostAJobController', ['DataService', PostAJobController]);
+    app.controller('PostAJobController', [PostAJobController]);
 
-    function PostAJobController(DataService) {
+    function PostAJobController() {
         var vm = this;
         vm.test = 'test';
-
-        // DataService.createCompany()
-        //     .then(function (response) {
-        //         vm.createCom = response;
-        //         console.log(response);
-        //     })
-        //     .catch(function (response) {
-        //         throw response;
-        //     });
-
     }
 }());
